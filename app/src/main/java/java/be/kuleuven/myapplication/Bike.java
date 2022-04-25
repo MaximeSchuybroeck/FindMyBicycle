@@ -1,4 +1,4 @@
-package java.be.kuleuven.myapplication;//package be.kuleuven.findmybicycle;
+package java.be.kuleuven.myapplication;
 
 
 public class Bike implements BikeFeatures{
