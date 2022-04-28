@@ -3,10 +3,10 @@ package java.be.kuleuven.myapplication;
 
 public class Bike implements BikeFeatures{
     private String name;
-    public Location bikeLocation;
+    public BikeLocation bikeLocation;
     public UserProfile owner;
 
-    public Bike(String name, Location location)
+    public Bike(String name, BikeLocation location)
     {
         this.name = name;
         bikeLocation = location;
@@ -22,12 +22,12 @@ public class Bike implements BikeFeatures{
     }
 
     @Override
-    public Location getLocation() {
+    public BikeLocation getLocation() {
         return this.bikeLocation;
     }
 
     @Override
-    public void setLocation(Location location) {
+    public void setLocation(BikeLocation location) {
         bikeLocation = location;
     }
 
