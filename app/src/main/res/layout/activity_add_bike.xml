@@ -6,25 +6,21 @@
     android:layout_height="match_parent">
     <!--tools:context=".AddBike">-->
 
-    <TextView
-        android:id="@+id/text_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_address"
-        android:textColor="@android:color/black"
-        android:textSize="19sp"
+    <Button
+        android:id="@+id/button_location"
+        android:layout_width="305dp"
+        android:layout_height="333dp"
+        android:layout_centerInParent="true"
+        android:text="@string/get_location"
+        android:textAllCaps="true"
+        android:textSize="146sp"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/get_location"
-        android:textAllCaps="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="146sp"
-        tools:ignore="MissingConstraints" />
+        android:id="@+id/addBike"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:text="Add bike" />
 
 
 </RelativeLayout>
