@@ -36,6 +36,10 @@
         "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\drawable_bike_background.jpg.flat",
+        "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\drawable\\bike_background.jpg"
+    },
+    {
         "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
@@ -48,16 +52,16 @@
         "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_add_bike.xml.flat",
+        "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_add_bike.xml"
+    },
+    {
         "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_add_bike.xml.flat",
-        "source": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_add_bike.xml"
     },
     {
         "merged": "C:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

@@ -5,4 +5,6 @@
     <string name="get_location">GET LOCATION</string>
     <string name="user_address">User Address</string>
     <string name="get_current_location">Get Current Location</string>
+    <string name="bikeBackground" />
+    <string name="todo">TODO</string>
 </resources>

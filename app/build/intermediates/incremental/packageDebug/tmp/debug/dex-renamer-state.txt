@@ -1,4 +1,4 @@
-#Thu Apr 28 10:19:37 CEST 2022
+#Mon May 02 11:42:16 CEST 2022
 base.2=C\:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.2=9/classes.dex
 base.1=C\:\\Users\\koenr\\AndroidStudioProjects\\FindMyBicycle\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

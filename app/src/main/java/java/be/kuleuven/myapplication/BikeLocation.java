@@ -24,7 +24,7 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
     Button button;
     TextView textView;
     LocationManager locationManager;
-    String lattitude, longitude;
+    String latitude, longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -70,29 +70,29 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
             if (location != null) {
                 double latti = location.getLatitude();
                 double longi = location.getLongitude();
-                lattitude = String.valueOf(latti);
+                latitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
-                textView.setText("Your current location is"+ "\n" + "Lattitude = " + lattitude
+                textView.setText("Your current location is"+ "\n" + "Latitude = " + latitude
                         + "\n" + "Longitude = " + longitude);
 
             } else  if (location1 != null) {
                 double latti = location1.getLatitude();
                 double longi = location1.getLongitude();
-                lattitude = String.valueOf(latti);
+                latitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
-                textView.setText("Your current location is"+ "\n" + "Lattitude = " + lattitude
+                textView.setText("Your current location is"+ "\n" + "Latitude = " + latitude
                         + "\n" + "Longitude = " + longitude);
 
 
             } else  if (location2 != null) {
                 double latti = location2.getLatitude();
                 double longi = location2.getLongitude();
-                lattitude = String.valueOf(latti);
+                latitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
-                textView.setText("Your current location is"+ "\n" + "Lattitude = " + lattitude
+                textView.setText("Your current location is"+ "\n" + "Latitude = " + latitude
                         + "\n" + "Longitude = " + longitude);
 
             }else{
