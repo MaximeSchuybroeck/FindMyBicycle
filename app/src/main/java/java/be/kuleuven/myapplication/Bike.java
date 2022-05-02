@@ -6,10 +6,10 @@ public class Bike implements BikeFeatures{
     public BikeLocation bikeLocation;
     public UserProfile owner;
 
-    public Bike(String name, BikeLocation location)
+    public Bike(String name)
     {
         this.name = name;
-        bikeLocation = location;
+        bikeLocation = null;
     }
     @Override
     public String getName() {

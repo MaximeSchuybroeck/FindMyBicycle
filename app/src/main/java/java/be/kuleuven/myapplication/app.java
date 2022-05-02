@@ -6,9 +6,12 @@ public class app {
 
     private UserProfile userProfile;
     private Bike bike;
-    private ArrayList<Bike> ;
+    private UserProfile user;
 
-    public app(){}
+    public app(){
+
+    }
+    //// START SCHERM GEDEELTE ////
 
     //to add a new user to the database
     public void newUserProfile(String firstname, String lastname, String username, String password, String phonenumber){
@@ -21,11 +24,18 @@ public class app {
         // TODO: 2/05/2022 in database kijken of dit account bestaat
     }
 
-    // bike toevoegen aan profiel
-    public void addBike()
-    {
 
+    //// BIKE GEDEELTE ////
+
+    // bike toevoegen aan profiel
+    public void addBike(String name){
+        bike = new Bike(name);
+        user.addBikeList(bike);
     }
+
+
+    //// ACCOUNT GEDEELTE ////
+
 
 
 
