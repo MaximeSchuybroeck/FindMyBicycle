@@ -3,14 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/drawable-nokeys/icon.xml" value="0.126" />
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.207" />
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/drawable/bikebackground.xml" value="0.126" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_2_account_screen.xml" value="0.22435897435897437" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_2_bike_screen.xml" value="0.22435897435897437" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_3_add_bike.xml" value="0.264" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_account.xml" value="0.4" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_add_bike.xml" value="0.25" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_locations.xml" value="0.22435897435897437" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_start_screen.xml" value="0.22435897435897437" />
         <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/drawable/ic_launcher_background.xml" value="0.205" />
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/drawable/my_image.xml" value="0.211" />
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/layout/activity_add_bike.xml" value="0.165" />
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/layout/activity_find_location.xml" value="0.1" />
-        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/layout/activity_main.xml" value="0.23489583333333333" />
       </map>
     </option>
   </component>
