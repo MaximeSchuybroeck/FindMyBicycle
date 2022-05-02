@@ -1,10 +1,10 @@
 package java.be.kuleuven.myapplication;
 
-public class main {
+public class app {
 
     private UserProfile userProfile;
 
-    public main(){}
+    public app(){}
 
     //to add a new user to the database
     public void newUserProfile(String firstname, String lastname, String username, String password, String phonenumber){
@@ -17,6 +17,8 @@ public class main {
         // TODO: 2/05/2022 in database kijken of dit account bestaat
     }
 
+    // bike toevoegen aan profiel
+    public void addBike()
 
 
 
