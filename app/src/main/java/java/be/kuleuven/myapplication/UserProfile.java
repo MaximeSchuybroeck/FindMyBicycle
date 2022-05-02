@@ -39,7 +39,7 @@ public class UserProfile implements Profile
     public void setPassword(String newPassword) {
         this.password = newPassword;
     }
-
+    /*
     @Override
     public void setAddress(String newAddress) {
         this.address = newAddress;
@@ -49,7 +49,7 @@ public class UserProfile implements Profile
     public String getAddress() {
         return address;
     }
-
+    */
     @Override
     public void setPhoneNumber(String newPhoneNumber) {
         this.phoneNumber = newPhoneNumber;

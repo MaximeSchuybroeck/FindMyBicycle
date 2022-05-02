@@ -12,11 +12,11 @@ public class main {
         userProfile = new UserProfile(firstname, lastname, password, username, phonenumber);
     }
 
-
     // to login en check with the database, then forwards you to the begin screen( the manage screen)
     public void login(String username, String password){
         // TODO: 2/05/2022 in database kijken of dit account bestaat
     }
+
 
 
 
