@@ -2,18 +2,22 @@ package java.be.kuleuven.myapplication;
 
 public class UserProfile implements Profile
 {
+    private String userName;
     private String phoneNumber;
-    private String address;
     private String password;
     private String firstName;
     private String lastName;
 
-    public UserProfile(String firstName, String lastName, String newPassword, String newAddress, String newPhoneNumber){
+    public UserProfile(String firstName, String lastName, String newPassword, String userName, String newPhoneNumber){
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = newPassword;
-        this.address = newAddress;
+        this.userName = userName;
         this.phoneNumber = newPhoneNumber;
+    }
+    public UserProfile(String userName, String newPassword){
+        this.userName = userName;
+        this.password = newPassword;
     }
     @Override
     public String getFirstName() {
