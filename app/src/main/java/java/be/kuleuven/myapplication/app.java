@@ -1,8 +1,12 @@
 package java.be.kuleuven.myapplication;
 
+import java.util.ArrayList;
+
 public class app {
 
     private UserProfile userProfile;
+    private Bike bike;
+    private ArrayList<Bike> ;
 
     public app(){}
 
@@ -19,6 +23,9 @@ public class app {
 
     // bike toevoegen aan profiel
     public void addBike()
+    {
+
+    }
 
 
 

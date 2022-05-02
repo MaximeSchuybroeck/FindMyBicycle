@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\koenr\.gradle\caches\transforms-3\8c8bd08bd5ab439882315c15d3205b6b\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\koenr\.gradle\caches\transforms-3\61b09c254559981a9a7bec3250cb1b37\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\koenr\.gradle\caches\transforms-3\f791586eb8e3cddcf33fb36842d7675a\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
@@ -48,37 +48,37 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\koenr\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\9f24011717b021bac9ee09874fd0df37\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\6abfac59d263b6c8870828beb848f440\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\koenr\.gradle\caches\transforms-3\a9e9e56cd500525808c19a605e367b6a\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:4:5-45
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:4:5-45
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-37:12
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:1-35:12
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:8:5-10:59
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:6:5-8:59
 	tools:ignore
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:10:9-56
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:8:9-56
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:9:9-63
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:7:9-63
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:11:5-67
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:9:5-67
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:11:22-64
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:13:5-35:19
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:11:5-33:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\koenr\.gradle\caches\transforms-3\8c8bd08bd5ab439882315c15d3205b6b\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\koenr\.gradle\caches\transforms-3\8c8bd08bd5ab439882315c15d3205b6b\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\koenr\.gradle\caches\transforms-3\61b09c254559981a9a7bec3250cb1b37\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -106,49 +106,49 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\koenr\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\koenr\.gradle\caches\transforms-3\02483169c4c9e0ddffa88758188ac6f1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:19:9-51
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:17:9-51
 activity#java.be.kuleuven.myapplication.AddBike
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:20:9-22:40
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:22:13-37
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:19:13-36
 activity#java.be.kuleuven.myapplication.BikeLocation
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:23:9-25:40
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:exported
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:25:13-37
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:24:13-41
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:22:13-41
 activity#java.be.kuleuven.myapplication.MainActivity
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:24:9-32:20
 	android:exported
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:28:13-36
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:25:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:29:13-33:29
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:30:17-69
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:32:17-77
+ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:30:27-74
 uses-sdk
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\koenr\.gradle\caches\transforms-3\8c8bd08bd5ab439882315c15d3205b6b\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\koenr\.gradle\caches\transforms-3\8c8bd08bd5ab439882315c15d3205b6b\transformed\material-1.5.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\koenr\.gradle\caches\transforms-3\61b09c254559981a9a7bec3250cb1b37\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
@@ -237,16 +237,16 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\koenr\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\6abfac59d263b6c8870828beb848f440\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\koenr\.gradle\caches\transforms-3\a9e9e56cd500525808c19a605e367b6a\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\koenr\.gradle\caches\transforms-3\a9e9e56cd500525808c19a605e367b6a\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\koenr\AndroidStudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 	android:exported

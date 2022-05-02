@@ -7,6 +7,7 @@ public class UserProfile implements Profile
     private String password;
     private String firstName;
     private String lastName;
+    private String address;
 
     public UserProfile(String firstName, String lastName, String newPassword, String userName, String newPhoneNumber){
         this.firstName = firstName;
@@ -21,12 +22,12 @@ public class UserProfile implements Profile
     }
     @Override
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     @Override
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
     @Override
@@ -47,7 +48,7 @@ public class UserProfile implements Profile
 
     @Override
     public String getAddress() {
-        return address;
+        return this.address;
     }
     */
     @Override
@@ -57,6 +58,6 @@ public class UserProfile implements Profile
 
     @Override
     public String getPhoneNumber() {
-        return phoneNumber;
+        return this.phoneNumber;
     }
 }

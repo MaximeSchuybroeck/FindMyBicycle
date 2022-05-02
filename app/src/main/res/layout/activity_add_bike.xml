@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
     <!--tools:context=".AddBike">-->
 
     <Button
@@ -14,7 +15,8 @@
         app:layout_constraintBottom_toTopOf="@+id/addLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownIdInLayout" />
 
     <Button
         android:id="@+id/button_location"
@@ -32,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="false"
         android:layout_marginEnd="335dp"
-        android:text="TextView"
+        android:text="@string/textview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     />

@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/ManageBike"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="283dp"
         android:text="Manage Bike"
         android:textAllCaps="false"
