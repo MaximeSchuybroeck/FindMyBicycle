@@ -6,11 +6,12 @@ public class UserProfile implements Profile
 {
     private String userName;
     private String phoneNumber;
-    private String password;
+    protected String password;
     private String firstName;
     private String lastName;
     private String address;
     private ArrayList<Bike> bikeList;
+
 
     public UserProfile(String firstName, String lastName, String newPassword, String userName, String newPhoneNumber){
         this.firstName = firstName;
@@ -24,8 +25,8 @@ public class UserProfile implements Profile
         this.userName = userName;
         this.password = newPassword;
     }
-    @Override
-    public String getFirstName() {
+
+    public String getFirstName(){
         return this.firstName;
     }
 
@@ -41,10 +42,31 @@ public class UserProfile implements Profile
     }
 
     @Override
-    public void setPassword(String newPassword) {
-        this.password = newPassword;
+    public String getUserName() {
+        return userName;
+    }
+
+    @Override
+    public void setUserName(String newUserName) {
+        // TODO: 7/05/2022 checken met database of input UNIEK is 
+        // TODO: 7/05/2022 miss methode veranderen in een boolean teruggave, dat de methode teruggeeft of de EDIT succesvol was of niet 
+        this.userName = newUserName;
     }
     
+    @Override
+    public void setPassword(String oldPassword, String newPassword) {
+        if(oldPassword == password){
+            this.password = newPassword;
+        } else{
+            System.out.println("Wrong password, try again");
+        }
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
     @Override
     public void setPhoneNumber(String newPhoneNumber) {
         this.phoneNumber = newPhoneNumber;

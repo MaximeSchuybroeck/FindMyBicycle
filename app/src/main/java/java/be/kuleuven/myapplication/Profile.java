@@ -1,15 +1,18 @@
 package java.be.kuleuven.myapplication;
 
 public  interface Profile {
-    public String getFirstName();
-    public String getLastName();
-    public void setName(String firstName, String lastName);
-    public void setPassword(String newPassword);
+    String getFirstName();
+    String getLastName();
+    void setName(String firstName, String lastName);
+    String getUserName();
+    void setUserName(String newUserName);
+    void setPassword(String oldPassword, String newPassword);
+    String getPassword();
     /*
     public void setAddress(String newAddress);
     public String getAddress();
      */
-    public void setPhoneNumber(String newPhoneNumber);
-    public String getPhoneNumber();
+    void setPhoneNumber(String newPhoneNumber);
+    String getPhoneNumber();
 
 }
