@@ -39,9 +39,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Username"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appName" />
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        app:layout_constraintVertical_bias="0.019" />
 
     <Button
         android:id="@+id/newUser_input"
@@ -77,9 +79,11 @@
         android:layout_marginTop="20dp"
         android:text="Password:"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_input" />
+        app:layout_constraintTop_toBottomOf="@+id/username_input"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
