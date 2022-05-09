@@ -30,13 +30,15 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addBike);
+        setContentView(R.layout.activity_edit_bike);
         ActivityCompat.requestPermissions(this, new String[]
         {
             Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_LOCATION);
-
+/*
         textView = (TextView)findViewById(R.id.text_location);
         button =(Button)findViewById(R.id.button_location);
+
+ */
 
         button.setOnClickListener(this);
     }

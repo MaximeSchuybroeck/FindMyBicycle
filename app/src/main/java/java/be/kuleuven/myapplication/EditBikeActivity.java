@@ -8,6 +8,6 @@ public class EditBikeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editBike);
+        setContentView(R.layout.activity_edit_bike);
     }
 }
