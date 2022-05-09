@@ -38,7 +38,7 @@ public class UserProfile implements Profile
     @Override
     public void setName(String firstName, String lastName) {
         this.firstName = firstName;
-        this.lastName = lastName;
+
     }
 
     @Override
