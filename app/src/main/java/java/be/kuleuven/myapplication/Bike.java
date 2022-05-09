@@ -1,6 +1,8 @@
 package java.be.kuleuven.myapplication;
 
 
+import android.view.View;
+
 public class Bike implements BikeFeatures{
     private String name;
     public BikeLocation bikeLocation;
@@ -40,4 +42,6 @@ public class Bike implements BikeFeatures{
     public void setOwner(UserProfile userProfile) {
         owner = userProfile;
     }
+
+
 }

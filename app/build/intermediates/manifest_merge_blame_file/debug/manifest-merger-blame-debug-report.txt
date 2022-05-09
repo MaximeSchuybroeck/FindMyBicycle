@@ -6,121 +6,121 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml
+8-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml
+9-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
 10    <!-- self added to get gps-location -->
 11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-11-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:6:5-8:59
-11-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:7:9-63
+11-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:6:5-8:59
+11-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:7:9-63
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:9:5-67
-12-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:9:22-64
+12-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:9:5-67
+12-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:9:22-64
 13
 14    <application
-14-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:11:5-37:19
+14-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:11:5-37:19
 15        android:allowBackup="true"
-15-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:12:9-35
+15-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:12:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.7.0] C:\Users\Maxim\.gradle\caches\transforms-3\02483169c4c9e0ddffa88758188ac6f1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.7.0] C:\Users\koenr\.gradle\caches\transforms-3\02483169c4c9e0ddffa88758188ac6f1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:extractNativeLibs="false"
 19        android:icon="@mipmap/ic_launcher"
-19-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:13:9-43
+19-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:13:9-43
 20        android:label="@string/app_name"
-20-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:14:9-41
+20-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:14:9-41
 21        android:roundIcon="@mipmap/ic_launcher_round"
-21-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:15:9-54
+21-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:15:9-54
 22        android:supportsRtl="true"
-22-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:16:9-35
+22-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:16:9-35
 23        android:testOnly="true"
 24        android:theme="@style/Theme.MyApplication" >
-24-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:17:9-51
+24-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:17:9-51
 25        <activity
-25-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:18:9-20:40
+25-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:18:9-20:40
 26            android:name="java.be.kuleuven.myapplication.BikeLocation"
-26-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:19:13-41
+26-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:19:13-41
 27            android:exported="false" />
-27-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:20:13-37
+27-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:20:13-37
 28        <activity
-28-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:21:9-23:39
+28-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:21:9-23:39
 29            android:name="java.be.kuleuven.myapplication.MainActivityTemp"
-29-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:22:13-45
+29-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:22:13-45
 30            android:exported="true" />
-30-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:23:13-36
+30-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:23:13-36
 31        <activity
-31-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:24:9-26:38
+31-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:24:9-26:38
 32            android:name="java.be.kuleuven.myapplication.LoginActivity"
-32-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:25:13-42
+32-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:25:13-42
 33            android:exported="true" />
-33-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:26:13-36
+33-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:26:13-36
 34        <activity
-34-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:28:9-36:20
+34-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:28:9-36:20
 35            android:name="java.be.kuleuven.myapplication.MainActivity"
-35-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:29:13-41
+35-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:29:13-41
 36            android:exported="true" >
-36-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:30:13-36
+36-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:30:13-36
 37            <intent-filter>
-37-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:31:13-35:29
+37-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:31:13-35:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:32:17-69
-38-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:32:25-66
+38-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:32:17-69
+38-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:32:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:34:17-77
-40-->C:\Users\Maxim\OneDrive\Documenten\KUL\Jaar_2_sem_2\Programmeertechnieken\labo 7-13\FindMyBicycle\app\src\main\AndroidManifest.xml:34:27-74
+40-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:34:17-77
+40-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:34:27-74
 41            </intent-filter>
 42        </activity>
 43        <activity
-43-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Maxim\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+43-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 44            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-44-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Maxim\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+44-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 45            android:exported="false"
-45-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Maxim\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+45-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 46            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-46-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Maxim\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+46-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\53207dac8a8df2118dd13aece775a512\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 47
 48        <meta-data
-48-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\aa48c91a361697853c50874daf57bfd5\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+48-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\koenr\.gradle\caches\transforms-3\aa48c91a361697853c50874daf57bfd5\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 49            android:name="com.google.android.gms.version"
-49-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\aa48c91a361697853c50874daf57bfd5\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+49-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\koenr\.gradle\caches\transforms-3\aa48c91a361697853c50874daf57bfd5\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
 50            android:value="@integer/google_play_services_version" />
-50-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\aa48c91a361697853c50874daf57bfd5\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+50-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\koenr\.gradle\caches\transforms-3\aa48c91a361697853c50874daf57bfd5\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
 51
 52        <provider
-52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
 54            android:authorities="java.be.kuleuven.myapplication.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
 55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
 56            <meta-data
-56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
 57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
 58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\278083bef5dd79cb476949a0d92ce592\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
 59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Maxim\.gradle\caches\transforms-3\4d932a67b7be3c4366d55752ebd69384\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\koenr\.gradle\caches\transforms-3\4d932a67b7be3c4366d55752ebd69384\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
 60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Maxim\.gradle\caches\transforms-3\4d932a67b7be3c4366d55752ebd69384\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+60-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\koenr\.gradle\caches\transforms-3\4d932a67b7be3c4366d55752ebd69384\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
 61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Maxim\.gradle\caches\transforms-3\4d932a67b7be3c4366d55752ebd69384\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+61-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\koenr\.gradle\caches\transforms-3\4d932a67b7be3c4366d55752ebd69384\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
 62        </provider>
 63
 64        <uses-library
-64-->[androidx.window:window:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+64-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
 65            android:name="androidx.window.extensions"
-65-->[androidx.window:window:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+65-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
 66            android:required="false" />
-66-->[androidx.window:window:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+66-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
 67        <uses-library
-67-->[androidx.window:window:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+67-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
 68            android:name="androidx.window.sidecar"
-68-->[androidx.window:window:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+68-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
 69            android:required="false" />
-69-->[androidx.window:window:1.0.0] C:\Users\Maxim\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+69-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\3c7c892fa0d1dc32ab5492929999b753\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 70    </application>
 71
 72</manifest>

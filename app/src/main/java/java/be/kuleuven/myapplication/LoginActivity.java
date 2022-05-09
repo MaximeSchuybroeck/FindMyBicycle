@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class LoginActivity extends Activity {
+    // maxime fixt dees
+
+    private UserProfile userProfile;
 
     private UserProfile userProfile;
 
