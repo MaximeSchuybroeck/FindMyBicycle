@@ -4,18 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".MainActivity">
+    android:backgroundTint="@android:color/holo_green_dark"
+    android:backgroundTintMode="add">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="146dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="143dp"
-        android:text="Button"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="95dp" />
+        android:id="@+id/ManageLocations"
+        android:layout_width="0dp"
+        android:layout_height="283dp"
+        android:text="Manage Locations"
+        android:textAllCaps="false"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/ManageBike"
+        android:layout_width="wrap_content"
+        android:layout_height="283dp"
+        android:text="Manage Bike"
+        android:textAllCaps="false"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ManageLocations" />
+
+    <Button
+        android:id="@+id/ManageAccount"
+        android:layout_width="0dp"
+        android:layout_height="282dp"
+        android:text="Manage Account"
+        android:textAllCaps="false"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ManageBike" />
 </androidx.constraintlayout.widget.ConstraintLayout>

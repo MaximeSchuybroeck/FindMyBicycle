@@ -3,7 +3,6 @@ package java.be.kuleuven.myapplication;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -31,7 +30,7 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_bike);
+        setContentView(R.layout.activity_addBike);
         ActivityCompat.requestPermissions(this, new String[]
         {
             Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_LOCATION);
