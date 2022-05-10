@@ -8,30 +8,37 @@ import android.widget.Button;
 
 public class LoginActivity extends Activity {
     // maxime fixt dees
-
     private UserProfile userProfile;
-
-    private UserProfile userProfile;
+    private Button addUserButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        addUserButton = (Button) findViewById(R.id.newUserButton);
+        addUserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activityNewUser();
+            }
+        });
     }
-
     // to login en check with the database, then forwards you to the begin screen( the manage screen)
     public void login(String username, String password){
         // TODO: 2/05/2022 in database kijken of dit account bestaat
     }
 
-    public void addUser(View view){
-        setContentView(R.layout.activity_new_user);
+    public void activityNewUser(){
+        Intent intent = new Intent(this, NewUserActivity.class);
+        startActivity(intent);
     }
+
 
     /*
     Button addUser = (Button) findViewById(R.id.newUserButton);
         addUser.setOnClickListener(new View.OnClickListener());
 
      */
+
 
 }

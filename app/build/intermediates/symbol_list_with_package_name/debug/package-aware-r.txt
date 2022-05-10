@@ -2945,7 +2945,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
-id newUser_input
+id newUserButton
 id noScroll
 id noState
 id none

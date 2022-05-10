@@ -23,16 +23,28 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity
-            android:name="java.be.kuleuven.myapplication.BikeLocation"
+            android:name="java.be.kuleuven.myapplication.LocationActivity"
             android:exported="false" />
         <activity
             android:name="java.be.kuleuven.myapplication.MainActivityTemp"
             android:exported="true" />
         <activity
-            android:name="java.be.kuleuven.myapplication.LoginActivity"
+            android:name="java.be.kuleuven.myapplication.MainActivity"
             android:exported="true" />
         <activity
-            android:name="java.be.kuleuven.myapplication.MainActivity"
+            android:name="java.be.kuleuven.myapplication.AccountActivity"
+            android:exported="true" />
+        <activity
+            android:name="java.be.kuleuven.myapplication.EditBikeActivity"
+            android:exported="true" />
+        <activity
+            android:name="java.be.kuleuven.myapplication.BikeActivity"
+            android:exported="true" />
+        <activity
+            android:name="java.be.kuleuven.myapplication.NewUserActivity"
+            android:exported="true" />
+        <activity
+            android:name="java.be.kuleuven.myapplication.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

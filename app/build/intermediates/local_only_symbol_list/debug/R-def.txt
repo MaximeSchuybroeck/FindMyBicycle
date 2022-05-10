@@ -51,7 +51,7 @@ id lastname
 id listOfBikes
 id name
 id nav_graph
-id newUser_input
+id newUserButton
 id password_input
 id returnButton
 id textFirstName

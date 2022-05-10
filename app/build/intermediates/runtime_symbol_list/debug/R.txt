@@ -2944,7 +2944,7 @@ int id navigation_header_container 0x7f08015b
 int id never 0x7f08015c
 int id neverCompleteToEnd 0x7f08015d
 int id neverCompleteToStart 0x7f08015e
-int id newUser_input 0x7f08015f
+int id newUserButton 0x7f08015f
 int id noScroll 0x7f080160
 int id noState 0x7f080161
 int id none 0x7f080162
