@@ -30,7 +30,7 @@ public class BikeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bike);
-        Button addBikeButton = (Button) findViewById(R.id.newUserButton);
+        Button addBikeButton = (Button) findViewById(R.id.addBike);
         addBikeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +48,7 @@ public class BikeActivity extends Activity {
             }
         });
 
-        Button editBikeButton = (Button) findViewById(R.id.newUserButton);
+        Button editBikeButton = (Button) findViewById(R.id.editBicycle);
         editBikeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,7 +70,7 @@ public class BikeActivity extends Activity {
     public void addBikeLocation()
     {
         //go to select bike and automatically add the location of that instance to the selected bike
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 
