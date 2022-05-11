@@ -69,4 +69,6 @@
     <string name="manage_account">Manage Account</string>
     <string name="number">number</string>
     <string name="submit">SUBMIT</string>
+    <string name="add_location">add location</string>
+    <string name="add_bike">add bike</string>
 </resources>
