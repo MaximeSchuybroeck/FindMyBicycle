@@ -11,6 +11,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +29,26 @@ public class LocationActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
+        Button addLocationButton = (Button) findViewById(R.id.ManageLocations);
+        addLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getLocation();
+            }
+        });
+
+        Button findLocationButton = (Button) findViewById(R.id.ManageLocations);
+        findLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getPosition();
+                TextView positionView = findViewById(R.id.text_location);
+                positionView.setText(getPosition());
+            }
+        });
+
         ActivityCompat.requestPermissions(this, new String[]
-                {
-                        Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+                {Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
         textView = (TextView) findViewById(R.id.text_location);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -96,14 +114,23 @@ public class LocationActivity extends Activity {
                 final AlertDialog alert = builder.create();
                 alert.show();
             }
-    public double getLongitude()
+
+            public String getPosition()
+            {
+                double longi = getLongitude();
+                double lati = getLatitude();
+                return ("position is" + "\n"+ "longitude: " + String.valueOf(longi)+  "\n" + "latitude:" + String.valueOf(lati));
+            }
+
+            public double getLongitude()
     {
         return this.longitude;
     }
 
-    public double getLatitude()
+            public double getLatitude()
     {
         return this.latitude;
     }
     }
+
 

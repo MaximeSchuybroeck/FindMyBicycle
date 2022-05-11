@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@android:color/holo_green_dark"
-    android:backgroundTintMode="add">
+    android:backgroundTintMode="add"
+    android:background="@drawable/bike_background"
+    >
+
 
     <Button
         android:id="@+id/ManageLocations"
         android:layout_width="0dp"
-        android:layout_height="283dp"
+        android:layout_height="100dp"
         android:text="@string/manage_locations"
         android:textAllCaps="false"
         android:textSize="30sp"
@@ -20,24 +22,29 @@
 
     <Button
         android:id="@+id/ManageBike"
-        android:layout_width="wrap_content"
-        android:layout_height="283dp"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="204dp"
+        android:onClick="onClick"
         android:text="@string/manage_bike"
         android:textAllCaps="false"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ManageLocations" />
 
     <Button
         android:id="@+id/ManageAccount"
         android:layout_width="0dp"
-        android:layout_height="282dp"
+        android:layout_height="100dp"
         android:text="@string/manage_account"
         android:textAllCaps="false"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManageBike" />
+        app:layout_constraintTop_toBottomOf="@+id/ManageBike"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,9 +22,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 public class BikeActivity extends Activity {
-    private UserProfile owner;
-    private Bike bike;
-    private BikeLocation bikeLocation;
+    //private UserProfile owner;
+    //private Bike bike;
+    //private BikeLocation bikeLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
