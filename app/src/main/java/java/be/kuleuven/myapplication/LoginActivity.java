@@ -2,6 +2,7 @@ package java.be.kuleuven.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,8 +30,8 @@ public class LoginActivity extends Activity {
                 toNewUserActivity();
             }
         });
-
-
+        MediaPlayer mp = MediaPlayer.create(LoginActivity.this, R.raw.queen_bicycle);
+        mp.start();
     }
     // to login en check with the database, then forwards you to the begin screen( the manage screen)
     public void login(String username, String password){

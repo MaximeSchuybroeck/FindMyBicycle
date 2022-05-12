@@ -30,7 +30,9 @@ public class BikeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bike);
-        Button addBikeButton = (Button) findViewById(R.id.addBike);
+        //works till here
+
+ /*       Button addBikeButton = (Button) findViewById(R.id.button);
         addBikeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +40,7 @@ public class BikeActivity extends Activity {
             }
 
         });
+
         Button addBikeLocationButton = (Button) findViewById(R.id.addLocation);
         addBikeLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,8 +81,7 @@ public class BikeActivity extends Activity {
     {
         //go to edit bike screen
         Intent intent = new Intent(this, EditBikeActivity.class);
-        startActivity(intent);
+        startActivity(intent);*/
     }
-
 }
 
