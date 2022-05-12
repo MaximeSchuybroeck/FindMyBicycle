@@ -71,4 +71,6 @@
     <string name="submit">SUBMIT</string>
     <string name="add_location">add location</string>
     <string name="add_bike">add bike</string>
+    <string name="bike_name">Bike name:</string>
+    <string name="description">Description</string>
 </resources>

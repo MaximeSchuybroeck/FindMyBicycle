@@ -22,6 +22,15 @@ public class LoginActivity extends Activity {
                 toNewUserActivity();
             }
         });
+        Button loginButton = (Button) findViewById(R.id.newUserButton);
+        addUserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toNewUserActivity();
+            }
+        });
+
+
     }
     // to login en check with the database, then forwards you to the begin screen( the manage screen)
     public void login(String username, String password){

@@ -7,6 +7,8 @@ public interface BikeFeatures {
     public void setLocation(BikeLocation location);
     public UserProfile getOwner();
     public void setOwner( UserProfile userProfile);
+    public void setDescription( String description);
+    public String getDescription();
 
 
 

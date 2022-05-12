@@ -29,7 +29,7 @@ public class LocationActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-        Button addLocationButton = (Button) findViewById(R.id.ManageLocations);
+        Button addLocationButton = (Button) findViewById(R.id.addLocation);
         addLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,7 +37,7 @@ public class LocationActivity extends Activity {
             }
         });
 
-        Button findLocationButton = (Button) findViewById(R.id.ManageLocations);
+        Button findLocationButton = (Button) findViewById(R.id.findLocation);
         findLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
