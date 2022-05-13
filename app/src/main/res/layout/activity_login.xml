@@ -21,14 +21,16 @@
     <EditText
         android:id="@+id/password_input"
         android:layout_width="211dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         android:text="@string/password2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textPassword"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/username_input"
@@ -36,14 +38,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/username"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintVertical_bias="0.015"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/appName"
@@ -77,9 +82,20 @@
         android:id="@+id/newUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_user"
         android:onClick="addUser"
+        android:text="@string/new_user"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:text="@string/login"
+        app:layout_constraintBottom_toTopOf="@+id/newUserButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_input" />

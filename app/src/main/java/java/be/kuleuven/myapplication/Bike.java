@@ -1,8 +1,6 @@
 package java.be.kuleuven.myapplication;
 
 
-import android.view.View;
-
 public class Bike implements BikeFeatures{
     private String name;
     public BikeLocation bikeLocation;
