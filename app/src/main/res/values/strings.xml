@@ -37,7 +37,7 @@
     <string name="edit2">EDIT</string>
     <string name="edit_account_settings">Edit account settings</string>
     <string name="firstname">Firstname:</string>
-    <string name="firstname_displayed">firstname_displayed</string>
+    <string name="Username_displayed">firstname_displayed</string>
     <string name="edit3">EDIT</string>
     <string name="lastname">Lastname:</string>
     <string name="lastname_displayed">lastname_displayed</string>
@@ -74,4 +74,6 @@
     <string name="bike_name">Bike name:</string>
     <string name="description">Description</string>
     <string name="login">LOGIN</string>
+    <string name="username_displayed">Username_displayed</string>
+    <string name="password_displayed">password_displayed</string>
 </resources>

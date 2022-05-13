@@ -13,44 +13,27 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button manageBikeButton = (Button) findViewById(R.id.ManageBike);
-        manageBikeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goBikeActivity();
-            }
-        });
-
-        Button manageLocationButton = (Button) findViewById(R.id.ManageLocations);
-        manageBikeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goLocationActivity();
-            }
-        });
-
-        Button manageAccountButton = (Button) findViewById(R.id.ManageAccount);
-        manageAccountButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goAccountActivity();
-            }
-        });
+        //manage bike
+        Button manageBikeButton = findViewById(R.id.ManageBike);
+        manageBikeButton.setOnClickListener(v -> goBikeActivity());
+        //manage locations
+        Button manageLocationButton = findViewById(R.id.ManageLocations);
+        manageLocationButton.setOnClickListener(v -> goLocationActivity());
+        //manage account
+        Button manageAccountButton = findViewById(R.id.ManageAccount);
+        manageAccountButton.setOnClickListener(v -> goAccountActivity());
     }
-    public void goBikeActivity()
-    {
+    public void goBikeActivity(){
         Intent intent = new Intent(this, BikeActivity.class);
         startActivity(intent);
     }
 
-    public void goLocationActivity()
-    {
+    public void goLocationActivity(){
         Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 
-    public void goAccountActivity()
-    {
+    public void goAccountActivity(){
         Intent intent = new Intent (this, AccountActivity.class);
         startActivity(intent);
     }

@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/phonenumber_displayed"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editLastname"
+        app:layout_constraintEnd_toStartOf="@+id/editPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PhoneNumber"
@@ -21,7 +21,7 @@
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/editLastname2"
+        android:id="@+id/editPhonenumber"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -49,16 +49,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/editLastname"
+        android:id="@+id/editPassword"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="@string/edit"
-        app:layout_constraintBottom_toTopOf="@+id/editLastname2"
+        app:layout_constraintBottom_toTopOf="@+id/editPhonenumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastname"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.019" />
 
     <TextView
@@ -87,12 +87,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/firstname"
+        android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="@string/firstname"
+        android:text="@string/username"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,35 +107,35 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/firstname_displayed"
+        android:text="@string/username_displayed"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editFirstname"
+        app:layout_constraintEnd_toStartOf="@+id/editUsername"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstname"
+        app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/editFirstname"
+        android:id="@+id/editUsername"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="@string/edit"
-        app:layout_constraintBottom_toTopOf="@+id/editLastname"
+        app:layout_constraintBottom_toTopOf="@+id/editPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstname"
+        app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/lastname"
+        android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="@string/lastname"
+        android:text="@string/password"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,12 +150,12 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/lastname_displayed"
+        android:text="@string/password_displayed"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editLastname"
+        app:layout_constraintEnd_toStartOf="@+id/editPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastname"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.001"
         tools:ignore="LabelFor" />
 
