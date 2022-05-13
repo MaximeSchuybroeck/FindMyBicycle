@@ -29,7 +29,7 @@ public class LoginActivity extends Activity {
     }
     // check login input with the database, if ok forwards to MainActivity screen
     public void login(String username, String password){
-        if(username.equals("") || password.equals("")){
+        if(username.equals("") || username.equals("Username") || password.equals("") || password.equals("Password")){
             System.out.println("Wrong input. Try again");
         }else{
             // TODO: 2/05/2022 in database kijken of dit account bestaat

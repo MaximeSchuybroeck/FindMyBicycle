@@ -18,24 +18,24 @@ public class NewUserActivity extends Activity {
         setContentView(R.layout.activity_new_user);
         // UserProfile newUser = new UserProfile("", "", "");
         //submit button
-        Button toMain = findViewById(R.id.submitButton);
+        Button SubmitButton = findViewById(R.id.submitButton);
         EditText UserNameEdit = findViewById(R.id.usernameInput2);
         EditText PasswordEdit = findViewById(R.id.passwordInput2);
         EditText PNumberEdit = findViewById(R.id.pNumberInput2);
-        toMain.setOnClickListener(v -> checkInput(UserNameEdit.getText().toString(), PasswordEdit.getText().toString(), PNumberEdit.getText().toString()));
+        SubmitButton.setOnClickListener(v -> checkInput(UserNameEdit.getText().toString(), PasswordEdit.getText().toString(), PNumberEdit.getText().toString()));
     }
 
-    private void checkInput(String userName, String password, String phoneNumber){
-        System.out.println("userName: " + userName);
-        System.out.println("password: " + password);
-        System.out.println("number: " + phoneNumber);
+    private void checkInput(String username, String password, String pNumber){
+        if(username.equals("") || username.equals("Username") || password.equals("") || password.equals("Password") || pNumber.equals("Number") || pNumber.equals("")){
+            System.out.println("Wrong input try again");
+        }else{
+            // TODO: 13/05/2022 databank linken
+            // TODO: 10/05/2022 (niet belangrijk) zorgen dat eens je op het main screen ben je niet terug kan naar NewUserActivity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
     }
 
-    private void toMainActivity() {
-        // TODO: 10/05/2022 stream maken van atributen van username, dan nagaan of al de atributen zijn ingevuld,
-        //  zoniet error message, zowel kan op op submit geduuwd worden
-        // TODO: 10/05/2022 (niet belangrijk) zorgen dat eens je op het main screen ben je niet terug kan naar NewUserActivity
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
+
 }
