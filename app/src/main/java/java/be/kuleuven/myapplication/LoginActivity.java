@@ -32,6 +32,8 @@ public class LoginActivity extends Activity {
         });
         MediaPlayer mp = MediaPlayer.create(LoginActivity.this, R.raw.queen_bicycle);
         mp.start();
+
+
     }
     // to login en check with the database, then forwards you to the begin screen( the manage screen)
     public void login(String username, String password){
@@ -41,10 +43,13 @@ public class LoginActivity extends Activity {
         //send to MainActivity screen
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
+
     }
     // the NewUser button link to NewUserActivity screen
     public void toNewUserActivity(){
         Intent intent = new Intent(this, NewUserActivity.class);
         startActivity(intent);
+
     }
 }
