@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputLastName2" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameInput2" />
 
     <TextView
         android:id="@+id/textPhonenumber2"
@@ -27,10 +27,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/pNumberInput2" />
 
     <EditText
-        android:id="@+id/inputLastName2"
+        android:id="@+id/usernameInput2"
         android:layout_width="211dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -130,7 +130,7 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/pNumberInput2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -147,7 +147,7 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/passwordInput2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -178,7 +178,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput2"
         app:layout_constraintVertical_bias="0.459" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@
         android:layout_height="30dp"
         android:text="@string/user_name"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/username_input"
+        app:layout_constraintBottom_toTopOf="@+id/usernameInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/password_input"
+        android:id="@+id/passwordInput"
         android:layout_width="211dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -33,7 +33,7 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/username_input"
+        android:id="@+id/usernameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_input"
+        app:layout_constraintTop_toBottomOf="@+id/usernameInput"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -87,7 +87,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
     <Button
         android:id="@+id/loginButton"
@@ -98,6 +98,6 @@
         app:layout_constraintBottom_toTopOf="@+id/newUserButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

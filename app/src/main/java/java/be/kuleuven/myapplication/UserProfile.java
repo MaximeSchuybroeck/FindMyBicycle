@@ -7,15 +7,11 @@ public class UserProfile implements Profile
     private String userName;
     private String phoneNumber;
     protected String password;
-    private String firstName;
-    private String lastName;
     private String address;
     private ArrayList<Bike> bikeList;
 
 
-    public UserProfile(String firstName, String lastName, String newPassword, String userName, String newPhoneNumber){
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public UserProfile( String userName, String newPassword, String newPhoneNumber){
         this.password = newPassword;
         this.userName = userName;
         this.phoneNumber = newPhoneNumber;
@@ -24,21 +20,6 @@ public class UserProfile implements Profile
     public UserProfile(String userName, String newPassword){
         this.userName = userName;
         this.password = newPassword;
-    }
-
-    public String getFirstName(){
-        return this.firstName;
-    }
-
-    @Override
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    @Override
-    public void setName(String firstName, String lastName) {
-        this.firstName = firstName;
-
     }
 
     @Override
@@ -55,7 +36,7 @@ public class UserProfile implements Profile
     
     @Override
     public void setPassword(String oldPassword, String newPassword) {
-        if(oldPassword == password){
+        if(oldPassword.equals(password)){
             this.password = newPassword;
         } else{
             System.out.println("Wrong password, try again");
