@@ -25,6 +25,8 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
     TextView textView;
     LocationManager locationManager;
     String latitude, longitude;
+    double longi;
+    double latti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -71,8 +73,8 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
             Location location2 = locationManager.getLastKnownLocation(LocationManager. PASSIVE_PROVIDER);
 
             if (location != null) {
-                double latti = location.getLatitude();
-                double longi = location.getLongitude();
+                latti = location.getLatitude();
+                longi = location.getLongitude();
                 latitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
@@ -80,8 +82,8 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
                         + "\n" + "Longitude = " + longitude);
 
             } else  if (location1 != null) {
-                double latti = location1.getLatitude();
-                double longi = location1.getLongitude();
+                latti = location1.getLatitude();
+                longi = location1.getLongitude();
                 latitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
@@ -90,8 +92,8 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
 
 
             } else  if (location2 != null) {
-                double latti = location2.getLatitude();
-                double longi = location2.getLongitude();
+                latti = location2.getLatitude();
+                longi = location2.getLongitude();
                 latitude = String.valueOf(latti);
                 longitude = String.valueOf(longi);
 
@@ -104,6 +106,15 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
 
             }
         }
+    }
+
+    public double getLongi()
+    {
+        return longi;
+    }
+    public double getLatti()
+    {
+        return this.latti;
     }
 
     protected void buildAlertMessageNoGps() {

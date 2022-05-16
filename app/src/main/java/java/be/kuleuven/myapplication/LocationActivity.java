@@ -69,7 +69,7 @@ public class LocationActivity extends Activity {
             ActivityCompat.requestPermissions(LocationActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
 
         } else {
-            Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
 
             Location location1 = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
@@ -102,6 +102,8 @@ public class LocationActivity extends Activity {
 
             }
         }
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 
             protected void buildAlertMessageNoGps () {
