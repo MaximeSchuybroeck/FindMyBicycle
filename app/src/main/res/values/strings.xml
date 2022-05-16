@@ -73,5 +73,5 @@
     <string name="add_bike">add bike</string>
     <string name="bike_name">Bike name:</string>
     <string name="description">Description</string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <string name="login">LOGIN</string>
 </resources>

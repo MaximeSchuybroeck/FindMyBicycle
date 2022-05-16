@@ -5,39 +5,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class NewUserActivity extends Activity {
-    private UserProfile newUser;
-    private String userName;
-    private String phoneNumber;
-    protected String password;
-    private String firstName;
-    private String lastName;
-    private String address;
+    //private String userName;
+    //private String phoneNumber;
+    //protected String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
-        newUser = new UserProfile("","","","","");
-        Button toMain = (Button) findViewById(R.id.submitButton);
-        toMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toMainActivity();
-            }
-        });
+        // UserProfile newUser = new UserProfile("", "", "");
+        //submit button
+        Button SubmitButton = findViewById(R.id.submitButton);
+        EditText UserNameEdit = findViewById(R.id.usernameInput2);
+        EditText PasswordEdit = findViewById(R.id.passwordInput2);
+        EditText PNumberEdit = findViewById(R.id.pNumberInput2);
+        SubmitButton.setOnClickListener(v -> checkInput(UserNameEdit.getText().toString(), PasswordEdit.getText().toString(), PNumberEdit.getText().toString()));
     }
 
-    private void toMainActivity() {
-        // TODO: 10/05/2022 stream maken van atributen van username, dan nagaan of al de atributen zijn ingevuld,
-        //  zoniet error message, zowel kan op op submit geduuwd worden
-        // TODO: 10/05/2022 (niet belangrijk) zorgen dat eens je op het main screen ben je niet terug kan naar NewUserActivity
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    private void checkInput(String username, String password, String pNumber){
+        if(username.equals("") || username.equals("Username") || password.equals("") || password.equals("Password") || pNumber.equals("Number") || pNumber.equals("")){
+            System.out.println("Wrong input try again");
+        }else{
+            // TODO: 13/05/2022 databank linken
+            // TODO: 10/05/2022 (niet belangrijk) zorgen dat eens je op het main screen ben je niet terug kan naar NewUserActivity
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
     }
 
-    public void setFirstName(String name){
 
-    }
 }
