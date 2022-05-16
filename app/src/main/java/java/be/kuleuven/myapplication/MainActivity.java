@@ -16,20 +16,12 @@ public class MainActivity extends Activity {
         //manage bike
         Button manageBikeButton = findViewById(R.id.ManageBike);
         manageBikeButton.setOnClickListener(v -> goBikeActivity());
-        //manage locations
-        Button manageLocationButton = findViewById(R.id.ManageLocations);
-        manageLocationButton.setOnClickListener(v -> goLocationActivity());
         //manage account
         Button manageAccountButton = findViewById(R.id.ManageAccount);
         manageAccountButton.setOnClickListener(v -> goAccountActivity());
     }
     public void goBikeActivity(){
         Intent intent = new Intent(this, BikeActivity.class);
-        startActivity(intent);
-    }
-
-    public void goLocationActivity(){
-        Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 

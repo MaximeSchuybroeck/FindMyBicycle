@@ -36,22 +36,22 @@
             android:exported="false" />
         <activity
             android:name=".MainActivityTemp"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".AccountActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".EditBikeActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".BikeActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".NewUserActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

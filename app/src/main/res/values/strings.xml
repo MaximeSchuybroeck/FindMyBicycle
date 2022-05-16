@@ -72,9 +72,10 @@
     <string name="add_location">add location</string>
     <string name="add_bike">add bike</string>
     <string name="bike_name">Bike name:</string>
-    <string name="description">Description</string>
+    <string name="description">Description:</string>
     <string name="login">LOGIN</string>
     <string name="username_displayed">Username_displayed</string>
     <string name="password_displayed">password_displayed</string>
-    <string name="bikeDescription">"bikeDescription "</string>
+    <string name="bicycle_name2">Bicycle name:</string>
+    <string name="optional">Optional</string>
 </resources>
