@@ -83,7 +83,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/bikeDescription"
+        android:text="@string/optional"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editBikeName"
         app:layout_constraintHorizontal_bias="0.0"
