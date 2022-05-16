@@ -23,4 +23,8 @@ public class app {
     public static void setPopUpTitle(String title){ popUpTitle = title;}
     public static String getPopUpMessage(){ return popUpMessage;}
     public static void setPopUpMessage(String message){ popUpMessage = message;}
+
+    //userProfile getters en setters
+    public static UserProfile getUserProfile(){ return userProfile;}
+    public static void setUserProfile
 }

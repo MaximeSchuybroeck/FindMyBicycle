@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BikeNameInput"
+        app:layout_constraintTop_toBottomOf="@+id/bikeNameInput"
         app:layout_constraintVertical_bias="0.012" />
 
     <TextView
@@ -52,7 +52,7 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/BikeNameInput"
+        android:id="@+id/bikeNameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
