@@ -119,7 +119,7 @@ public class LocationActivity extends Activity {
             {
                 double longi = getLongitude();
                 double lati = getLatitude();
-                return ("position is" + "\n"+ "longitude: " + String.valueOf(longi)+  "\n" + "latitude:" + String.valueOf(lati));
+                return ("position is" + "\n"+ "longitude: " + longi +  "\n" + "latitude:" + lati);
             }
 
             public double getLongitude()

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="java.be.kuleuven.myapplication">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/bike_background"
@@ -26,10 +27,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
+
         <activity
             android:name=".AddBikeActivity"
             android:exported="false" />

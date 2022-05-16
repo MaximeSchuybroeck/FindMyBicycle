@@ -23,9 +23,10 @@ public class LoginActivity extends Activity {
         EditText UserNameEdit = findViewById(R.id.usernameInput);
         EditText PasswordEdit = findViewById(R.id.passwordInput);
         loginButton.setOnClickListener(v -> login(UserNameEdit.getText().toString(), PasswordEdit.getText().toString()));
-        // music
+        //music
         MediaPlayer mp = MediaPlayer.create(LoginActivity.this, R.raw.queen_bicycle);
         mp.start();
+
     }
     // check login input with the database, if ok forwards to MainActivity screen
     public void login(String username, String password){

@@ -2,6 +2,7 @@ package java.be.kuleuven.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,8 @@ public class NewUserActivity extends Activity {
         EditText PasswordEdit = findViewById(R.id.passwordInput2);
         EditText PNumberEdit = findViewById(R.id.pNumberInput2);
         SubmitButton.setOnClickListener(v -> checkInput(UserNameEdit.getText().toString(), PasswordEdit.getText().toString(), PNumberEdit.getText().toString()));
+        MediaPlayer mp = MediaPlayer.create(NewUserActivity.this, R.raw.queen_bicycle);
+        mp.start();
     }
 
     private void checkInput(String username, String password, String pNumber){

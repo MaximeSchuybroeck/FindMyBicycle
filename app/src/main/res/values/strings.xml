@@ -76,4 +76,5 @@
     <string name="login">LOGIN</string>
     <string name="username_displayed">Username_displayed</string>
     <string name="password_displayed">password_displayed</string>
+    <string name="bikeDescription">"bikeDescription "</string>
 </resources>

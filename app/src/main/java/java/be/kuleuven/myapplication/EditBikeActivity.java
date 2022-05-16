@@ -16,6 +16,11 @@ public class EditBikeActivity extends Activity {
         EditText NameEdit = findViewById(R.id.bicycle_name);
         TextView ActionMessage = findViewById(R.id.actionMessage);
         EditNameButton.setOnClickListener(v -> changeName(NameEdit.getText().toString()));
+
+
+        Button editDescription = findViewById(R.id.editBikeDescription);
+        EditText DescriptionEdit = findViewById(R.id.editBikeDescription1);
+        editDescription.setOnClickListener(v -> changeDescription(DescriptionEdit.getText().toString()));
     }
 
     private void changeName(String name) {
@@ -23,8 +28,15 @@ public class EditBikeActivity extends Activity {
             app.getBike().setName(name);
             app.setPopUpTitle("Edit succeeded");
             app.setPopUpMessage("Bicycle name changed to: " + name);
-            //PopUp();
+            new PopUp();
             //https://www.youtube.com/watch?v=Bsm-BlXo2SI
         }
+    }
+    private void changeDescription(String description)
+    {
+        app.getBike().setDescription(description);
+        app.setPopUpTitle("Edit succeeded");
+        app.setPopUpMessage("Description changed to: " + description);
+        new PopUp();
     }
 }
