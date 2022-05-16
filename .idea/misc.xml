@@ -27,13 +27,11 @@
         <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_new_user_screen.xml" value="0.4" />
         <entry key="..\:/Users/Maxim/OneDrive/Documenten/KUL/Jaar_2_sem_2/Programmeertechnieken/labo 7-13/FindMyBicycle/app/src/main/res/layout/activity_start_screen.xml" value="0.22435897435897437" />
         <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_account.xml" value="0.17708333333333334" />
-        <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_add_bike.xml" value="0.4" />
         <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_bike.xml" value="0.2" />
-        <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_edit_bike.xml" value="0.2296195652173913" />
         <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_location.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_main.xml" value="0.24456521739130435" />
-        <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_new_user.xml" value="0.264" />
+        <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_new_user.xml" value="0.4" />
         <entry key="..\:/Users/Maxim/StudioProjects/FindMyBicycle/app/src/main/res/layout/test.xml" value="0.24456521739130435" />
         <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/drawable/ic_launcher_background.xml" value="0.205" />
         <entry key="..\:/Users/koenr/AndroidStudioProjects/FindMyBicycle/app/src/main/res/layout/activity_main.xml" value="0.23489583333333333" />
@@ -48,12 +46,15 @@
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_account.xml" value="0.1" />
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_add_bike.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_bike.xml" value="0.1" />
-        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_edit_bike.xml" value="0.17753623188405798" />
+        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_choose_bike.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_edit_bike.xml" value="0.165" />
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_location.xml" value="0.17753623188405798" />
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_login.xml" value="0.20199275362318841" />
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_main2.xml" value="0.12291666666666666" />
-        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_new_user.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_maps.xml" value="0.20199275362318841" />
+        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_new_user.xml" value="0.335" />
+        <entry key="..\:/Users/koenr/StudioProjects/FindMyBicycle/app/src/main/res/layout/activity_start.xml" value="0.26927083333333335" />
       </map>
     </option>
   </component>

@@ -79,4 +79,18 @@
     <string name="bicycle_name2">Bicycle name:</string>
     <string name="optional">Optional</string>
     <string name="bikeDescription">bikeDescription</string>
+    <string name="choose_bicycle_text">Choose bicycle</string>
+
+
+    <!-- Strings used for the dropdown menu of choose bicycle -->
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>
