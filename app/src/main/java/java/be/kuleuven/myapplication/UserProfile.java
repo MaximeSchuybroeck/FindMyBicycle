@@ -8,7 +8,7 @@ public class UserProfile implements Profile
     private String phoneNumber;
     protected String password;
     private String address;
-    private ArrayList<Bike> bikeList;
+    private static ArrayList<Bike> bikeList;
 
 
     public UserProfile( String userName, String newPassword, String newPhoneNumber){
@@ -60,20 +60,8 @@ public class UserProfile implements Profile
     
     public ArrayList<Bike> getBikeList(){return bikeList;}
     
-    public void addBikeList(Bike bike){
+    public static void addBikeList(Bike bike){
         bikeList.add(bike);
         // TODO: 2/05/2022 uploaden naar database 
     }
-    
-    /*
-    @Override
-    public void setAddress(String newAddress) {
-        this.address = newAddress;
-    }
-    @Override
-    public String getAddress() {
-        return this.address;
-    }
-    */
-    
 }

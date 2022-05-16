@@ -36,6 +36,7 @@ public class LoginActivity extends Activity {
             // TODO: 2/05/2022 in database kijken of dit account bestaat
             System.out.println(username);
             System.out.println(password);
+            new UserProfile(username, password);
             //send to MainActivity screen
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
