@@ -25,16 +25,15 @@ public class EditBikeActivity extends Activity {
 
     private void changeName(String name) {
         if(!name.isEmpty()){
-            app.getBike().setName(name);
+            app.getEditBike().setName(name);
             app.setPopUpTitle("Edit succeeded");
             app.setPopUpMessage("Bicycle name changed to: " + name);
             new PopUp();
             //https://www.youtube.com/watch?v=Bsm-BlXo2SI
         }
     }
-    private void changeDescription(String description)
-    {
-        app.getBike().setDescription(description);
+    private void changeDescription(String description) {
+        app.getEditBike().setDescription(description);
         app.setPopUpTitle("Edit succeeded");
         app.setPopUpMessage("Description changed to: " + description);
         new PopUp();

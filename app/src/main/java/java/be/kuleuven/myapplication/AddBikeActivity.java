@@ -1,6 +1,7 @@
 package java.be.kuleuven.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,29 +19,18 @@ public class AddBikeActivity extends Activity {
         addBikeButton.setOnClickListener(v -> addBike(BikeNameEdit.getText().toString(), DescriptionEdit.getText().toString()));
     }
     public void addBike(String bikeName, String description) {
-        Bike bike = new Bike(bikeName, description);
-        userProfile.addBikeList(bike);
-        //popup ding
-        //userProfile.getBikeList();
+        if (!bikeName.equals("Name")){
+            Bike bike = new Bike(bikeName, description);
+            app.getUser().addBikeList(bike);
+            app.setPopUpTitle("SUCCEEDED!");
+            app.setPopUpMessage("Bicycle added: " + bikeName);
+            new PopUp();
+            Intent intent = new Intent(this, BikeActivity.class);
+            startActivity(intent);
+        } else{
+            app.setPopUpTitle("FAILED");
+            app.setPopUpMessage("Give a useful name, and not: " + bikeName);
+            new PopUp();
+        }
     }
-
-    public void addBike(String bikeName) {
-        Bike bike = new Bike(bikeName);
-        userProfile.addBikeList(bike);
-        System.out.println("numer 2");
-        //userProfile.getBikeList();
-    }
-
-    /*
-    {
-            {
-                //register a new bike if bike has a name, can have a description
-                if (!bikeName.equals("Name"))// still needs to retrieve this information from the text fields
-                {
-                    if (!description.equals("Optional") ) {
-                        addBike(bikeName, description);
-                    }else {
-                        addBike(bikeName);
-                    } } } }
-     */
 }

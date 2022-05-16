@@ -43,7 +43,7 @@ public class BikeActivity extends Activity {
     }
 
     public void editBike(Bike bike) {
-        app.setBike(bike);
+        app.setEditBike(bike);
         //go to edit bike screen
         Intent intent = new Intent(this, EditBikeActivity.class);
         startActivity(intent);
