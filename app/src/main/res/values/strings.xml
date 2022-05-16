@@ -78,4 +78,5 @@
     <string name="password_displayed">password_displayed</string>
     <string name="bicycle_name2">Bicycle name:</string>
     <string name="optional">Optional</string>
+    <string name="bikeDescription">bikeDescription</string>
 </resources>
