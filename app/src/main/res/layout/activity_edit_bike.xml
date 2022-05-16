@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/drunk_bike_background">
 
     <Button
         android:id="@+id/editBikeName"
@@ -25,12 +26,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="@string/name"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/collorBanner2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <AutoCompleteTextView
         android:id="@+id/bicycle_name"
@@ -39,6 +41,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/bicycle_name"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editBikeName"
         app:layout_constraintHorizontal_bias="0.0"
@@ -70,6 +73,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="100dp"
         android:text="@string/description"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -84,6 +88,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/optional"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editBikeName"
         app:layout_constraintHorizontal_bias="0.0"
@@ -98,7 +103,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
-        android:text="@string/textview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -111,6 +115,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="@string/edit_bicycle"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
