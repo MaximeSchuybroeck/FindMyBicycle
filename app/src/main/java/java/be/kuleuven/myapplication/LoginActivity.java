@@ -17,7 +17,7 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         // New User button
         Button addUserButton = findViewById(R.id.newUserButton);
-        addUserButton.setOnClickListener(v -> toNewUserActivity());
+        addUserButton.setOnClickListener(v -> goNewUserActivity());
         // login button and login input
         Button loginButton = findViewById(R.id.loginButton);
         EditText UserNameEdit = findViewById(R.id.usernameInput);
@@ -29,7 +29,7 @@ public class LoginActivity extends Activity {
     }
     // check login input with the database, if ok forwards to MainActivity screen
     public void login(String username, String password){
-        if(username.equals("") || username.equals("Username") || password.equals("") || password.equals("Password")){
+        if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password")){
             System.out.println("Wrong input. Try again");
         }else{
             // TODO: 2/05/2022 in database kijken of dit account bestaat
@@ -42,7 +42,7 @@ public class LoginActivity extends Activity {
     }
 
     // forward to NewUserActivity screen
-    public void toNewUserActivity(){
+    public void goNewUserActivity(){
         Intent intent = new Intent(this, NewUserActivity.class);
         startActivity(intent);
     }

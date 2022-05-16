@@ -26,7 +26,7 @@ public class NewUserActivity extends Activity {
     }
 
     private void checkInput(String username, String password, String pNumber){
-        if(username.equals("") || username.equals("Username") || password.equals("") || password.equals("Password") || pNumber.equals("Number") || pNumber.equals("")){
+        if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password") || pNumber.equals("Number") || pNumber.isEmpty()){
             System.out.println("Wrong input try again");
         }else{
             // TODO: 13/05/2022 databank linken
@@ -34,8 +34,5 @@ public class NewUserActivity extends Activity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
-
     }
-
-
 }
