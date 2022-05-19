@@ -7,7 +7,6 @@ public class UserProfile implements Profile
     private String userName;
     private String phoneNumber;
     protected String password;
-    private String address;
     private static ArrayList<Bike> bikeList;
 
 

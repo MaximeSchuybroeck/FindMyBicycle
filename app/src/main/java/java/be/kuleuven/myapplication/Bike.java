@@ -4,13 +4,13 @@ package java.be.kuleuven.myapplication;
 public class Bike implements BikeFeatures{
     private String name;
     public BikeLocation bikeLocation;
-    public UserProfile owner;
+    //public UserProfile owner;
     private String description;
 
     public Bike(String name) {
         this.name = name;
         bikeLocation = null;
-        this.description = null;
+        this.description = "";
         setOwner(app.getUser());
     }
 
@@ -42,12 +42,12 @@ public class Bike implements BikeFeatures{
 
     @Override
     public UserProfile getOwner() {
-        return this.owner;
+        return app.getUser();
     }
 
     @Override
     public void setOwner(UserProfile userProfile) {
-        owner = userProfile;
+        app.setUser(userProfile);
     }
 
     @Override

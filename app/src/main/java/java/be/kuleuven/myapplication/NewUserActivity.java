@@ -28,7 +28,7 @@ public class NewUserActivity extends Activity {
     }
 
     private void checkInput(String username, String password, String pNumber){
-        if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password") || pNumber.equals("Number") || pNumber.isEmpty()){
+        if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password") || pNumber.equals("Number")){
             System.out.println("Wrong input try again");
         }else{
             // TODO: 13/05/2022 databank linken

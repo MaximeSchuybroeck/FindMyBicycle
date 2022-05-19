@@ -9,8 +9,6 @@ public class BikeActivity extends Activity {
     //private UserProfile owner;
     //private Bike bike;
     //private BikeLocation bikeLocation;
-    private static Bike bike;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +42,7 @@ public class BikeActivity extends Activity {
 
     public void editBike() {
         //go to edit bike screen
-        Intent intent = new Intent(this, EditBikeActivity.class);
+        Intent intent = new Intent(this, EditBikeActivity2.class);
         startActivity(intent);
     }
 

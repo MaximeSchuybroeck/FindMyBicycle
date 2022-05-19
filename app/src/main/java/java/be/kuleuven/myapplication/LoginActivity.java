@@ -4,13 +4,26 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import com.android.volley.*;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class LoginActivity extends Activity {
     // dit is klaar enkel nog de link tussen de database leggen bij login
     private UserProfile userProfile;
-
+    private RequestQueue requestQueue;
+    private String usernameFromDb;
+    private String passwordFromDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,23 +45,67 @@ public class LoginActivity extends Activity {
     public void login(String username, String password){
         if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password")){
             System.out.println("wrong input");
+            //get data from database
+
+
+
+
         }else{
             // TODO: 2/05/2022 in database kijken of dit account bestaat
             System.out.println();
             System.out.println(username);
             System.out.println(password);
             System.out.println();
-            UserProfile user = new UserProfile(username, password, "");
-            app.setUser(user);
-            //send to MainActivity screen
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            requestQueue = Volley.newRequestQueue(this);
+            String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";
+            StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONArray responseArray = new JSONArray(response);
+                                for (int i = 0; i < responseArray.length(); i++) {
+                                    JSONObject currentJSonObject = responseArray.getJSONObject(i);
+                                    usernameFromDb = currentJSonObject.getString("username");
+                                    passwordFromDb = currentJSonObject.getString("password");
+                                    if (username.equals(usernameFromDb) && password.equals(passwordFromDb))
+                                    {
+                                        UserProfile user = new UserProfile(username, password);
+                                        app.setUser(user);
+                                        //send to MainActivity screen
+                                        goNext();
+
+                                    }
+                                }
+                                System.out.println(usernameFromDb + "  " + passwordFromDb);
+
+                            } catch (JSONException e) {
+                                Log.e("database", e.getMessage(), e);
+                            }
+                        }
+                    },
+                    new Response.ErrorListener()
+                    {
+                        @Override
+                        public void onErrorResponse(VolleyError error)
+                        {
+                            System.out.println(error.getLocalizedMessage());
+                        }
+                    }
+            );
+
         }
     }
 
     // forward to NewUserActivity screen
     public void goNewUserActivity(){
         Intent intent = new Intent(this, NewUserActivity.class);
+        startActivity(intent);
+    }
+
+    public void goNext()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

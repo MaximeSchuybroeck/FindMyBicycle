@@ -8,26 +8,27 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 
 public class EditBikeActivity2 extends Activity {
-    private Bike editBike;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        editBike = app.getEditBike();
+        setContentView(R.layout.activity_edit_bike);
+        Bike editBike = app.getEditBike();
         System.out.println(editBike.getName());
         System.out.println("######################################");
-        /*
+
         //change description
         Button editNameButton = (Button) findViewById(R.id.editBikeName);
         EditText nameText = (EditText) findViewById(R.id.bicycle_name);
-        editNameButton.setOnClickListener(v -> changeDescription(String.valueOf(nameText.getText())));
+        editNameButton.setOnClickListener(v -> changeDescription(String.valueOf(nameText.getText()), editBike));
 
 
     }
 
-    private void changeDescription(String description) {
+    private void changeDescription(String description, Bike editBike) {
         editBike.setDescription(description);
         System.out.println("SUCCESSSSSS!!!!!!");
 
-         */
+
     }
 }
