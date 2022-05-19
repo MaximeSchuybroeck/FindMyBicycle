@@ -9,6 +9,8 @@ public class app {
 
     public app(){
         user = null;
+        Bike testBike = new Bike("test", "test");
+        setEditBike(testBike);
     }
 
     public static Bike getEditBike() {

@@ -25,7 +25,7 @@ public class BikeActivity extends Activity {
         //editBicycle
         Button editBikeButton = findViewById(R.id.editBicycle);
         // TODO: 13/05/2022 lijn eronder nog aanpassen naar een Bike input
-        editBikeButton.setOnClickListener(v -> editBike(null));
+        editBikeButton.setOnClickListener(v -> editBike());
 
     }
 
@@ -38,12 +38,11 @@ public class BikeActivity extends Activity {
 
     public void addLocation() {
         //go to select bike and automatically add the location of that instance to the selected bike
-        Intent intent = new Intent(this, LocationActivity.class);
+        Intent intent = new Intent(this, ChooseBikeActivity.class);
         startActivity(intent);
     }
 
-    public void editBike(Bike bike) {
-        app.setEditBike(bike);
+    public void editBike() {
         //go to edit bike screen
         Intent intent = new Intent(this, EditBikeActivity.class);
         startActivity(intent);
