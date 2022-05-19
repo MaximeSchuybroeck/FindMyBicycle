@@ -33,7 +33,7 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
 
     public void goNextActivity()
     {
-        Intent intent = new Intent(this, EditBikeActivity.class);
+        Intent intent = new Intent(this, EditBikeActivity2.class);
         startActivity(intent);
     }
     @Override
