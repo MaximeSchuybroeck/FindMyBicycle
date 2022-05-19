@@ -13,36 +13,39 @@ public class EditBikeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_bike);
+        /*
+        @SuppressLint("CutPasteId") TextView tv1 = (TextView)findViewById(R.id.bicycle_name);
+        tv1.setText(app.getEditBike().getName());
+        @SuppressLint("CutPasteId") TextView tv2 = (TextView)findViewById(R.id.editBikeDescription1);
+        tv2.setText((app.getEditBike().getDescription()));
+        */
         //changeName
         Button EditNameButton = findViewById(R.id.editBikeName);
-        EditText NameEdit = findViewById(R.id.bicycle_name);
+        @SuppressLint("CutPasteId") EditText NameEdit = findViewById(R.id.bicycle_name);
         EditNameButton.setOnClickListener(v -> changeName(NameEdit.getText().toString()));
         //changeDescription
         Button editDescription = findViewById(R.id.editBikeDescription);
-        EditText DescriptionEdit = findViewById(R.id.editBikeDescription1);
+        @SuppressLint("CutPasteId") EditText DescriptionEdit = findViewById(R.id.editBikeDescription1);
         editDescription.setOnClickListener(v -> changeDescription(DescriptionEdit.getText().toString()));
     }
-
     @SuppressLint("SetTextI18n")
     private void changeName(String name) {
-        TextView tv1 = (TextView)findViewById(R.id.actionMessage);
+        TextView tv3 = (TextView)findViewById(R.id.actionMessage);
         if(!name.isEmpty() || !name.equals(app.getEditBike().getName())){
             app.getEditBike().setName(name);
-            tv1.setText("SUCCEEDED");
+            tv3.setText("SUCCEEDED");
         } else{
-            tv1.setText("FAILED");
+            tv3.setText("FAILED");
         }
-        //setContentView(tv1);
     }
+    @SuppressLint("SetTextI18n")
     private void changeDescription(String description) {
+        TextView tv3 = (TextView)findViewById(R.id.actionMessage);
         if(!description.isEmpty() || !description.equals(app.getEditBike().getDescription())){
             app.getEditBike().setDescription(description);
-            app.setPopUpTitle("Edit succeeded");
-            app.setPopUpMessage("Description changed to: " + description);
+            tv3.setText("SUCCEEDED");
         } else{
-            app.setPopUpTitle("EDIT FAILED");
-            app.setPopUpMessage("Give a useful description, and not: " + description);
+            tv3.setText("FAILED");
         }
-        //new PopUp();
     }
 }
