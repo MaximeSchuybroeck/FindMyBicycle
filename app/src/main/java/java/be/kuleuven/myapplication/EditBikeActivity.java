@@ -30,6 +30,7 @@ public class EditBikeActivity extends Activity {
         //changeName
         Button editNameButton = (Button) findViewById(R.id.editBikeName);
         AutoCompleteTextView nameEdit = findViewById(R.id.bicycle_name);
+        //nameEdit.setText(app.getEditBike().getName());
         editNameButton.setOnClickListener(v -> changeName(nameEdit.getText().toString()));
 
 

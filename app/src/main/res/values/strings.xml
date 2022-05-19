@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Find My Bicycle</string>
     <string name="latitude">Latitude:</string>
     <string name="longitude">Longitude:</string>
     <string name="get_location">GET LOCATION</string>
@@ -83,14 +83,11 @@
 
 
     <!-- Strings used for the dropdown menu of choose bicycle -->
-    <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+    <string-array name="chooseBikeDropdown">
+        <item>bike1</item>
+        <item>bike2</item>
+        <item>bike3</item>
+        <item>bike4</item>
+        <item>bike5</item>
     </string-array>
 </resources>
