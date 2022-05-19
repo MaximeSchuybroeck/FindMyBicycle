@@ -51,8 +51,6 @@
         tools:ignore="LabelFor" />
 
 
-
-
     <Button
         android:id="@+id/editBikeDescription"
         android:layout_width="100dp"
