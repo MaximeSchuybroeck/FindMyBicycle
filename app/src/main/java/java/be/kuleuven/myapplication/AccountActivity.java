@@ -2,6 +2,7 @@ package java.be.kuleuven.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -11,21 +12,26 @@ public class AccountActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+
         //editUsername
-        Button EditUsernameButton = findViewById(R.id.editUsername);
-        EditText UserNameEdit = findViewById(R.id.autoCompleteTextView);
-        UserNameEdit.setText(app.getUser().getUserName());
-        EditUsernameButton.setOnClickListener(v -> editUsername(UserNameEdit.getText().toString()));
+        Button editUsernameButton = findViewById(R.id.editUsername);
+        AutoCompleteTextView userNameEdit = findViewById(R.id.autoCompleteTextView);
+        userNameEdit.setText(app.getUser().getUserName());
+        editUsernameButton.setOnClickListener(v -> editUsername(userNameEdit.getText().toString()));
+
         //editPassword
-        Button EditPasswordButton = findViewById(R.id.editPassword);
-        EditText PasswordEdit = findViewById(R.id.autoCompleteTextView2);
-        //PasswordEdit.setText(app.getUser().getPassword());
-        EditPasswordButton.setOnClickListener(v -> editPassword(PasswordEdit.getText().toString()));
-        //editPhonenumber
-        Button EditPNumberButton = findViewById(R.id.editPhonenumber);
-        EditText PNumberEdit = findViewById(R.id.autoCompleteTextView3);
-        //PNumberEdit.setText(app.getUser().getPhoneNumber());
-        EditPNumberButton.setOnClickListener(v -> editPNumber(PNumberEdit.getText().toString()));
+        Button editPasswordButton = findViewById(R.id.editPassword);
+        AutoCompleteTextView passwordEdit = findViewById(R.id.autoCompleteTextView2);
+        passwordEdit.setText(app.getUser().getPassword());
+        editPasswordButton.setOnClickListener(v -> editPassword(passwordEdit.getText().toString()));
+
+        //editPhoneNumber
+        Button editPNumberButton = findViewById(R.id.editPhonenumber);
+        AutoCompleteTextView pNumberEdit = findViewById(R.id.autoCompleteTextView3);
+        pNumberEdit.setText(app.getUser().getPhoneNumber());
+        editPNumberButton.setOnClickListener(v -> editPNumber(pNumberEdit.getText().toString()));
+
+
     }
 
     private void editPNumber(String newPNumber) {
