@@ -51,11 +51,12 @@ public class LoginActivity extends Activity {
 
 
         }else{
-            // TODO: 2/05/2022 in database kijken of dit account bestaat
             System.out.println();
             System.out.println(username);
             System.out.println(password);
             System.out.println();
+
+
             requestQueue = Volley.newRequestQueue(this);
             String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";
             StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
@@ -68,6 +69,7 @@ public class LoginActivity extends Activity {
                                     JSONObject currentJSonObject = responseArray.getJSONObject(i);
                                     usernameFromDb = currentJSonObject.getString("username");
                                     passwordFromDb = currentJSonObject.getString("password");
+                                    System.out.println("username from db = " + usernameFromDb);
                                     if (username.equals(usernameFromDb) && password.equals(passwordFromDb))
                                     {
                                         UserProfile user = new UserProfile(username, password);
@@ -93,7 +95,7 @@ public class LoginActivity extends Activity {
                         }
                     }
             );
-
+        requestQueue.add(submitRequest);
         }
     }
 
