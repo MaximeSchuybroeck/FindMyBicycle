@@ -3,6 +3,7 @@ package java.be.kuleuven.myapplication;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,14 +20,23 @@ public class EditBikeActivity extends Activity {
         @SuppressLint("CutPasteId") TextView tv2 = (TextView)findViewById(R.id.editBikeDescription1);
         tv2.setText((app.getEditBike().getDescription()));
         */
+
+        /*
+        Button editUsernameButton = findViewById(R.id.editUsername);
+        AutoCompleteTextView userNameEdit = findViewById(R.id.autoCompleteTextView);
+        userNameEdit.setText(app.getUser().getUserName());
+        editUsernameButton.setOnClickListener(v -> editUsername(userNameEdit.getText().toString()));
+         */
         //changeName
-        Button EditNameButton = findViewById(R.id.editBikeName);
-        @SuppressLint("CutPasteId") EditText NameEdit = findViewById(R.id.bicycle_name);
-        EditNameButton.setOnClickListener(v -> changeName(NameEdit.getText().toString()));
+        Button editNameButton = (Button) findViewById(R.id.editBikeName);
+        AutoCompleteTextView nameEdit = findViewById(R.id.bicycle_name);
+        editNameButton.setOnClickListener(v -> changeName(nameEdit.getText().toString()));
+
+
         //changeDescription
-        Button editDescription = findViewById(R.id.editBikeDescription);
-        @SuppressLint("CutPasteId") EditText DescriptionEdit = findViewById(R.id.editBikeDescription1);
-        editDescription.setOnClickListener(v -> changeDescription(DescriptionEdit.getText().toString()));
+        Button editDescription = (Button) findViewById(R.id.editBikeDescription);
+        AutoCompleteTextView descriptionEdit = findViewById(R.id.editBikeDescription1);
+        editDescription.setOnClickListener(v -> changeDescription(descriptionEdit.getText().toString()));
     }
     @SuppressLint("SetTextI18n")
     private void changeName(String name) {
