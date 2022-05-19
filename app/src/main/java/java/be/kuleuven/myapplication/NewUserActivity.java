@@ -33,6 +33,8 @@ public class NewUserActivity extends Activity {
         }else{
             // TODO: 13/05/2022 databank linken
             // TODO: 10/05/2022 (niet belangrijk) zorgen dat eens je op het main screen ben je niet terug kan naar NewUserActivity
+            System.out.println(username);
+            System.out.println(password);
             UserProfile user = new UserProfile(username, password, pNumber);
             app.setUser(user);
             Intent intent = new Intent(this, MainActivity.class);

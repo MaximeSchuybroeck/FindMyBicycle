@@ -31,12 +31,14 @@ public class LoginActivity extends Activity {
     // check login input with the database, if ok forwards to MainActivity screen
     public void login(String username, String password){
         if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password")){
-
+            System.out.println("wrong input");
         }else{
             // TODO: 2/05/2022 in database kijken of dit account bestaat
+            System.out.println();
             System.out.println(username);
             System.out.println(password);
-            UserProfile user = new UserProfile(username, password);
+            System.out.println();
+            UserProfile user = new UserProfile(username, password, "");
             app.setUser(user);
             //send to MainActivity screen
             Intent intent = new Intent(this, MainActivity.class);

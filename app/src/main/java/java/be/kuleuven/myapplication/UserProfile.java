@@ -56,11 +56,22 @@ public class UserProfile implements Profile
     
     public ArrayList<Bike> getBikeList(){return bikeList;}
     
-    public static void addBikeList(Bike bike){
+    public void addBikeList(Bike bike){
         bikeList.add(bike);
         // TODO: 2/05/2022 uploaden naar database 
     }
-    /*
-    public boolean isMemberBikeList(Bike bike){}
-     */
+    public void addStringBikeList(String bikeName, String bikeDescription) {
+        Bike addBike = new Bike(bikeName, bikeDescription);
+        bikeList.add(addBike);
+    }
+
+    public boolean isMemberBikeList(String bikeName){
+        for (int i = 0; i < bikeList.size(); i++){
+            if(bikeList.get(i).getName().equals(bikeName)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

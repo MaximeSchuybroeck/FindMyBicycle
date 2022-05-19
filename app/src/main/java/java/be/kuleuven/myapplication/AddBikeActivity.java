@@ -8,24 +8,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class AddBikeActivity extends Activity {
-    public String bikeName;
-    public String description;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_bike);
         Button addBikeButton = (Button) findViewById(R.id.addBike);
-        EditText BikeNameEdit = findViewById(R.id.bikeNameInput);
-        EditText DescriptionEdit = findViewById(R.id.descriptionInput);
-        addBikeButton.setOnClickListener(v -> addBike(BikeNameEdit.getText().toString(), DescriptionEdit.getText().toString()));
+        EditText bikeNameEdit = findViewById(R.id.bikeNameInput);
+        EditText descriptionEdit = findViewById(R.id.descriptionInput);
+        addBikeButton.setOnClickListener(v -> addBike(bikeNameEdit.getText().toString(), descriptionEdit.getText().toString()));
     }
     @SuppressLint("SetTextI18n")
     public void addBike(String bikeName, String description) {
         TextView tv1 = (TextView)findViewById(R.id.actionMessage);
-        tv1.setText("SUCCEEDED");
-        if (!bikeName.equals("Name")){
-            Bike bike = new Bike(bikeName, description);
-           app.getUser().addBikeList(bike);
+        if (!bikeName.equals("Name") || !(app.getUser().isMemberBikeList(bikeName))) {
+            tv1.setText("SUCCEEDED");
+            app.getUser().addStringBikeList(bikeName, description);
+            // TODO: 19/05/2022 addbikelist probleem
         } else{
             tv1.setText("FAILED");
         }
