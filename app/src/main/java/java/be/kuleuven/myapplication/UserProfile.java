@@ -35,12 +35,8 @@ public class UserProfile implements Profile
     }
     
     @Override
-    public void setPassword(String oldPassword, String newPassword) {
-        if(oldPassword.equals(password)){
-            this.password = newPassword;
-        } else{
-            System.out.println("Wrong password, try again");
-        }
+    public void setPassword(String newPassword) {
+        this.password = newPassword;
     }
 
     @Override
@@ -64,4 +60,7 @@ public class UserProfile implements Profile
         bikeList.add(bike);
         // TODO: 2/05/2022 uploaden naar database 
     }
+    /*
+    public boolean isMemberBikeList(Bike bike){}
+     */
 }

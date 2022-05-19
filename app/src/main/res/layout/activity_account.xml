@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/phonenumber_displayed"
+        android:text=""
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editPassword"
@@ -78,30 +78,17 @@
         app:layout_constraintVertical_bias="0.001" />
 
     <TextView
-        android:id="@+id/collarBarrier"
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:background="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountScreenInfo"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:text="@string/username"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/collarBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/accountScreenInfo"
         app:layout_constraintVertical_bias="0.0" />
 
     <AutoCompleteTextView
@@ -110,8 +97,8 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/username_displayed"
         android:textColor="@color/black"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editUsername"
         app:layout_constraintHorizontal_bias="0.0"
@@ -126,7 +113,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:text="@string/edit"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/editPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -155,7 +141,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/password_displayed"
+        android:text=""
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editPassword"

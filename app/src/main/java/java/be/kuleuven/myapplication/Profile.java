@@ -3,7 +3,7 @@ package java.be.kuleuven.myapplication;
 public  interface Profile {
     String getUserName();
     void setUserName(String newUserName);
-    void setPassword(String oldPassword, String newPassword);
+    void setPassword( String newPassword);
     String getPassword();
     /*
     public void setAddress(String newAddress);

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -34,6 +33,8 @@ public class NewUserActivity extends Activity {
         }else{
             // TODO: 13/05/2022 databank linken
             // TODO: 10/05/2022 (niet belangrijk) zorgen dat eens je op het main screen ben je niet terug kan naar NewUserActivity
+            UserProfile user = new UserProfile(username, password, pNumber);
+            app.setUser(user);
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }

@@ -1,42 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_new_user.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_new_user.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_bike.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_add_bike.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_edit_bike.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_edit_bike.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_account.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_account.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_choose_bike.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_choose_bike.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_maps.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_bike.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_bike.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_location.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_location.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_choose_bike.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_choose_bike.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_new_user.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_new_user.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_edit_bike.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_edit_bike.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_bike.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_bike.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_bike.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_add_bike.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_account.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_account.xml"
     },
     {
-        "merged": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_location.xml",
-        "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_location.xml"
+        "merged": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
+        "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\layout\\activity_maps.xml"
     }
 ]

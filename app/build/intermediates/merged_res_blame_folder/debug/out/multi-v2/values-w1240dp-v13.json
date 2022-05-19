@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w1240dp-v13\\values-w1240dp-v13.xml",
+            "outputFile": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w1240dp-v13\\values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\koenr\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\Users\\Maxim\\StudioProjects\\FindMyBicycle\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1,2",
                         "startColumns": "4,4",

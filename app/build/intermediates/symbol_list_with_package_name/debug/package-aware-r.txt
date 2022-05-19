@@ -2770,7 +2770,6 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id collarBarrier
 id collorBanner2
 id colorBanner
 id compress

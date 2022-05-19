@@ -22,14 +22,12 @@ public class AddBikeActivity extends Activity {
     @SuppressLint("SetTextI18n")
     public void addBike(String bikeName, String description) {
         TextView tv1 = (TextView)findViewById(R.id.actionMessage);
+        tv1.setText("SUCCEEDED");
         if (!bikeName.equals("Name")){
             Bike bike = new Bike(bikeName, description);
-            UserProfile.addBikeList(bike);
-            tv1.setText("SUCCEEDED");
-            setContentView(tv1);
+           app.getUser().addBikeList(bike);
         } else{
             tv1.setText("FAILED");
-            setContentView(tv1);
         }
     }
 }

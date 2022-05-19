@@ -37,9 +37,6 @@ public final class ActivityAccountBinding implements ViewBinding {
   public final AutoCompleteTextView autoCompleteTextView3;
 
   @NonNull
-  public final TextView collarBarrier;
-
-  @NonNull
   public final Button editPassword;
 
   @NonNull
@@ -57,16 +54,15 @@ public final class ActivityAccountBinding implements ViewBinding {
   private ActivityAccountBinding(@NonNull ConstraintLayout rootView, @NonNull TextView PhoneNumber,
       @NonNull TextView accountScreenInfo, @NonNull AutoCompleteTextView autoCompleteTextView,
       @NonNull AutoCompleteTextView autoCompleteTextView2,
-      @NonNull AutoCompleteTextView autoCompleteTextView3, @NonNull TextView collarBarrier,
-      @NonNull Button editPassword, @NonNull Button editPhonenumber, @NonNull Button editUsername,
-      @NonNull TextView password, @NonNull TextView username) {
+      @NonNull AutoCompleteTextView autoCompleteTextView3, @NonNull Button editPassword,
+      @NonNull Button editPhonenumber, @NonNull Button editUsername, @NonNull TextView password,
+      @NonNull TextView username) {
     this.rootView = rootView;
     this.PhoneNumber = PhoneNumber;
     this.accountScreenInfo = accountScreenInfo;
     this.autoCompleteTextView = autoCompleteTextView;
     this.autoCompleteTextView2 = autoCompleteTextView2;
     this.autoCompleteTextView3 = autoCompleteTextView3;
-    this.collarBarrier = collarBarrier;
     this.editPassword = editPassword;
     this.editPhonenumber = editPhonenumber;
     this.editUsername = editUsername;
@@ -131,12 +127,6 @@ public final class ActivityAccountBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.collarBarrier;
-      TextView collarBarrier = ViewBindings.findChildViewById(rootView, id);
-      if (collarBarrier == null) {
-        break missingId;
-      }
-
       id = R.id.editPassword;
       Button editPassword = ViewBindings.findChildViewById(rootView, id);
       if (editPassword == null) {
@@ -168,8 +158,8 @@ public final class ActivityAccountBinding implements ViewBinding {
       }
 
       return new ActivityAccountBinding((ConstraintLayout) rootView, PhoneNumber, accountScreenInfo,
-          autoCompleteTextView, autoCompleteTextView2, autoCompleteTextView3, collarBarrier,
-          editPassword, editPhonenumber, editUsername, password, username);
+          autoCompleteTextView, autoCompleteTextView2, autoCompleteTextView3, editPassword,
+          editPhonenumber, editUsername, password, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

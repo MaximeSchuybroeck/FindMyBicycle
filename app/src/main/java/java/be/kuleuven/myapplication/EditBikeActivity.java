@@ -29,11 +29,10 @@ public class EditBikeActivity extends Activity {
         if(!name.isEmpty() || !name.equals(app.getEditBike().getName())){
             app.getEditBike().setName(name);
             tv1.setText("SUCCEEDED");
-            setContentView(tv1);
         } else{
             tv1.setText("FAILED");
-            setContentView(tv1);
         }
+        //setContentView(tv1);
     }
     private void changeDescription(String description) {
         if(!description.isEmpty() || !description.equals(app.getEditBike().getDescription())){
@@ -44,6 +43,6 @@ public class EditBikeActivity extends Activity {
             app.setPopUpTitle("EDIT FAILED");
             app.setPopUpMessage("Give a useful description, and not: " + description);
         }
-        new PopUp();
+        //new PopUp();
     }
 }

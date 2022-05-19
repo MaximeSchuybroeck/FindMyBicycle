@@ -37,7 +37,6 @@ id bicycle_name
 id bikeNameInput
 id bikeNameText
 id button
-id collarBarrier
 id collorBanner2
 id colorBanner
 id descriptionInput
