@@ -14,22 +14,22 @@ public class AccountActivity extends Activity {
         setContentView(R.layout.activity_account);
 
         //editUsername
-        Button EditUsernameButton = findViewById(R.id.editUsername);
-        AutoCompleteTextView UserNameEdit = findViewById(R.id.autoCompleteTextView);
-        UserNameEdit.setText(app.getUser().getUserName());
-        EditUsernameButton.setOnClickListener(v -> editUsername(UserNameEdit.getText().toString()));
+        Button editUsernameButton = findViewById(R.id.editUsername);
+        AutoCompleteTextView userNameEdit = findViewById(R.id.autoCompleteTextView);
+        userNameEdit.setText(app.getUser().getUserName());
+        editUsernameButton.setOnClickListener(v -> editUsername(userNameEdit.getText().toString()));
 
         //editPassword
-        Button EditPasswordButton = findViewById(R.id.editPassword);
-        AutoCompleteTextView PasswordEdit = findViewById(R.id.autoCompleteTextView2);
-        PasswordEdit.setText(app.getUser().getPassword());
-        EditPasswordButton.setOnClickListener(v -> editPassword(PasswordEdit.getText().toString()));
+        Button editPasswordButton = findViewById(R.id.editPassword);
+        AutoCompleteTextView passwordEdit = findViewById(R.id.autoCompleteTextView2);
+        passwordEdit.setText(app.getUser().getPassword());
+        editPasswordButton.setOnClickListener(v -> editPassword(passwordEdit.getText().toString()));
 
         //editPhoneNumber
-        Button EditPNumberButton = findViewById(R.id.editPhonenumber);
-        AutoCompleteTextView PNumberEdit = findViewById(R.id.autoCompleteTextView3);
-        PNumberEdit.setText(app.getUser().getPhoneNumber());
-        EditPNumberButton.setOnClickListener(v -> editPNumber(PNumberEdit.getText().toString()));
+        Button editPNumberButton = findViewById(R.id.editPhonenumber);
+        AutoCompleteTextView pNumberEdit = findViewById(R.id.autoCompleteTextView3);
+        pNumberEdit.setText(app.getUser().getPhoneNumber());
+        editPNumberButton.setOnClickListener(v -> editPNumber(pNumberEdit.getText().toString()));
 
 
     }
