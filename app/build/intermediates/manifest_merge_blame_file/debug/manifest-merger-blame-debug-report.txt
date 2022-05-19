@@ -1,0 +1,209 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="java.be.kuleuven.myapplication"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:6:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:7:5-79
+12-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:7:22-76
+13
+14    <!-- Include required permissions for Google Maps API to run. -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+15-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:22-76
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+16-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:22-64
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+21
+22    <queries>
+22-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+23
+24        <!-- Needs to be explicitly declared on Android R+ -->
+25        <package android:name="com.google.android.apps.maps" />
+25-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+25-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\koenr\.gradle\caches\transforms-3\3660c6ac5b0471a60ea6c4dfc47e613f\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+26    </queries>
+27
+28    <application
+28-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:9:5-71:19
+29        android:allowBackup="true"
+29-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:10:9-35
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.7.0] C:\Users\koenr\.gradle\caches\transforms-3\c27260b4b17e4ff4cc5fe6b30243041e\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:extractNativeLibs="false"
+33        android:icon="@drawable/bike_background"
+33-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:11:9-49
+34        android:label="@string/app_name"
+34-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:12:9-41
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:13:9-54
+36        android:supportsRtl="true"
+36-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:14:9-35
+37        android:theme="@style/Theme.MyApplication" >
+37-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:15:9-51
+38        <activity
+38-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:16:9-18:40
+39            android:name="java.be.kuleuven.myapplication.ChooseBikeActivity"
+39-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:17:13-47
+40            android:exported="false" />
+40-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:18:13-37
+41        <!--
+42             TODO: Before you run your application, you need a Google Maps API key.
+43
+44             To get one, follow the directions here:
+45
+46                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+47
+48             Once you have your API key (it starts with "AIza"), define a new property in your
+49             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+50             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+51        -->
+52        <meta-data
+53            android:name="com.google.android.geo.API_KEY"
+53-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:31:13-58
+54            android:value="AIzaSyCF6uftKZjFoUfw56otOeaYwHHSK9x_C0A" />
+54-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:32:13-44
+55
+56        <uses-library
+56-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:34:9-36:40
+57            android:name="org.apache.http.legacy"
+57-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:35:13-50
+58            android:required="false" />
+58-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:36:13-37
+59
+60        <activity
+60-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:38:9-40:40
+61            android:name="java.be.kuleuven.myapplication.AddBikeActivity"
+61-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:39:13-44
+62            android:exported="false" />
+62-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:40:13-37
+63        <activity
+63-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:41:9-43:40
+64            android:name="java.be.kuleuven.myapplication.LocationActivity"
+64-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:42:13-45
+65            android:exported="false" />
+65-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:43:13-37
+66        <activity
+66-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:44:9-46:40
+67            android:name="java.be.kuleuven.myapplication.MainActivityTemp"
+67-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:45:13-45
+68            android:exported="false" />
+68-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:46:13-37
+69        <activity
+69-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:47:9-49:40
+70            android:name="java.be.kuleuven.myapplication.MainActivity"
+70-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:48:13-41
+71            android:exported="false" />
+71-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:49:13-37
+72        <activity
+72-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:50:9-52:40
+73            android:name="java.be.kuleuven.myapplication.AccountActivity"
+73-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:51:13-44
+74            android:exported="false" />
+74-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:52:13-37
+75        <activity
+75-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:53:9-55:40
+76            android:name="java.be.kuleuven.myapplication.EditBikeActivity"
+76-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:54:13-45
+77            android:exported="false" />
+77-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:55:13-37
+78        <activity
+78-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:56:9-58:40
+79            android:name="java.be.kuleuven.myapplication.BikeActivity"
+79-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:57:13-41
+80            android:exported="false" />
+80-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:58:13-37
+81        <activity
+81-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:59:9-61:40
+82            android:name="java.be.kuleuven.myapplication.NewUserActivity"
+82-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:60:13-44
+83            android:exported="false" />
+83-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:61:13-37
+84        <activity
+84-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:62:9-70:20
+85            android:name="java.be.kuleuven.myapplication.LoginActivity"
+85-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:63:13-42
+86            android:exported="true" >
+86-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:64:13-36
+87            <intent-filter>
+87-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:65:13-69:29
+88                <action android:name="android.intent.action.MAIN" />
+88-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:66:17-69
+88-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:66:25-66
+89
+90                <category android:name="android.intent.category.LAUNCHER" />
+90-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:68:17-77
+90-->C:\Users\koenr\StudioProjects\FindMyBicycle\app\src\main\AndroidManifest.xml:68:27-74
+91            </intent-filter>
+92        </activity>
+93        <activity
+93-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\8d49452248a0e3590af7012ee4b218bb\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+94-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\8d49452248a0e3590af7012ee4b218bb\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+95            android:exported="false"
+95-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\8d49452248a0e3590af7012ee4b218bb\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+96-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\koenr\.gradle\caches\transforms-3\8d49452248a0e3590af7012ee4b218bb\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+97
+98        <meta-data
+98-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ea7d661c9c9aa0381400431e6a04405e\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+99            android:name="com.google.android.gms.version"
+99-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ea7d661c9c9aa0381400431e6a04405e\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+100            android:value="@integer/google_play_services_version" />
+100-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ea7d661c9c9aa0381400431e6a04405e\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+101
+102        <provider
+102-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+103            android:name="androidx.startup.InitializationProvider"
+103-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+104            android:authorities="java.be.kuleuven.myapplication.androidx-startup"
+104-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+105            android:exported="false" >
+105-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+106            <meta-data
+106-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+107                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+107-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+108                android:value="androidx.startup" />
+108-->[androidx.emoji2:emoji2:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\cf88331d422984a8154495889781f1a8\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+109            <meta-data
+109-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\koenr\.gradle\caches\transforms-3\772073fed69f6616b80edd7b515b3c43\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+110                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+110-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\koenr\.gradle\caches\transforms-3\772073fed69f6616b80edd7b515b3c43\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+111                android:value="androidx.startup" />
+111-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\koenr\.gradle\caches\transforms-3\772073fed69f6616b80edd7b515b3c43\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+112        </provider>
+113
+114        <uses-library
+114-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ee44033c9cf66dc731c775a239fea775\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+115            android:name="androidx.window.extensions"
+115-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ee44033c9cf66dc731c775a239fea775\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+116            android:required="false" />
+116-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ee44033c9cf66dc731c775a239fea775\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+117        <uses-library
+117-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ee44033c9cf66dc731c775a239fea775\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+118            android:name="androidx.window.sidecar"
+118-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ee44033c9cf66dc731c775a239fea775\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+119            android:required="false" />
+119-->[androidx.window:window:1.0.0] C:\Users\koenr\.gradle\caches\transforms-3\ee44033c9cf66dc731c775a239fea775\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+120    </application>
+121
+122</manifest>
