@@ -42,6 +42,9 @@
             android:name=".LocationActivity"
             android:exported="false" />
         <activity
+            android:name=".EditBikeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivityTemp"
             android:exported="false" />
         <activity
