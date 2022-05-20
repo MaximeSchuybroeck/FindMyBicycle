@@ -7,14 +7,15 @@ public class Bike implements BikeFeatures{
     //public UserProfile owner;
     private String description;
 
-    public Bike(String name) {
-        this.name = name;
-        bikeLocation = null;
-        this.description = "";
-        setOwner(app.getUser());
-    }
+    //niet meer van toepassing normaal gezien
+    //public Bike(String name) {
+    //    this.name = name;
+    //    bikeLocation = null;
+    //    this.description = "";
+    //    setOwner(app.getUser());
+    //}
 
-    public Bike(String name, String description) {
+    public Bike(String name,String description) {
         this.name = name;
         this.description = description;
         bikeLocation = null;

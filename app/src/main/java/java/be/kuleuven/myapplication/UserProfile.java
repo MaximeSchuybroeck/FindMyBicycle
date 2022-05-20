@@ -19,6 +19,7 @@ public class UserProfile implements Profile
     public UserProfile(String userName, String newPassword){
         this.userName = userName;
         this.password = newPassword;
+        bikeList = new ArrayList<Bike>();
     }
 
     @Override

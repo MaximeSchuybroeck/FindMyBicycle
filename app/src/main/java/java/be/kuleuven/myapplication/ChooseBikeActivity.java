@@ -26,6 +26,7 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
         Button goNext = findViewById(R.id.button2);
         goNext.setOnClickListener(v -> goNextActivity());
 
@@ -39,11 +40,15 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
+        ///Hier zit nog een fout in want rest werkt
+        System.out.println("test1");
         for (int i = 0; i < app.getUser().getBikeList().size(); i++)
         {
+            System.out.println("test2");
             if (app.getUser().getBikeList().get(i).getName().equals(text))
             {
                 app.setEditBike(app.getUser().getBikeList().get(i));
+                System.out.println("test3");
             }
         }
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();

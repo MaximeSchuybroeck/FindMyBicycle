@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,15 +19,26 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class BikeLocation extends AppCompatActivity implements View.OnClickListener
 {
     private static final int REQUEST_LOCATION = 1;
     Button button;
     TextView textView;
     LocationManager locationManager;
-    String latitude, longitude;
-    double longi;
-    double latti;
+    String latitude, longitude, longitudeFromDb, latitudeFromDb, ownerFromDb, bikeLongitude, bikeLatitude;
+    double longi, latti;
+    RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,12 +65,13 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
 
 
         } else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            getLocation();
+            getLocationNow();
         }
     }
 
     @SuppressLint("SetTextI18n")
-    private void getLocation() {
+    private void getLocationNow() {
+        //Gets the location of the user at this moment
         if (ActivityCompat.checkSelfPermission(BikeLocation.this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
                 (BikeLocation.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -127,7 +140,50 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
         final AlertDialog alert = builder.create();
         alert.show();
         }
+    public void getLocationFromDb()
+    {
+
+        requestQueue = Volley.newRequestQueue(this);
+        String requestURL = "https://studev.groept.be/api/a21pt112/getBikeDate";
+        StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+                            for (int i = 0; i < responseArray.length(); i++) {
+                                JSONObject currentJSonObject = responseArray.getJSONObject(i);
+                                ownerFromDb = currentJSonObject.getString("owner");
+                                longitudeFromDb = currentJSonObject.getString("longitude");
+                                latitudeFromDb = currentJSonObject.getString("latitude");
+                                System.out.println("longitude from db = " + longitudeFromDb);
+                                System.out.println("latitude from db = " + latitudeFromDb);
+                                if (app.getUser().getUserName().equals(ownerFromDb))
+                                {
+                                    bikeLongitude = longitudeFromDb;
+                                    bikeLatitude = latitudeFromDb;
+                                }
+                            }
+                            //////plaats maken waar de latitude en lognitude worden geprint en kunnen worden opgehaald
+
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueue.add(submitRequest);
     }
+
+}
 
 
 
