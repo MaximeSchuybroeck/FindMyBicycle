@@ -104,7 +104,8 @@ public class NewUserActivity extends Activity {
 
                                         //make user and set it to active user
                                         UserProfile newProfile = new UserProfile(username, password);
-                                        app.setUser(newProfile);
+                                        new App();
+                                        App.setUser(newProfile);
                                         goNext();
                                     }
                                     else
@@ -115,7 +116,8 @@ public class NewUserActivity extends Activity {
 
                                         //make user to active user
                                         UserProfile newProfile = new UserProfile(username, password, pNumber);
-                                        app.setUser(newProfile);
+                                        new App();
+                                        App.setUser(newProfile);
                                         goNext();
                                     }
                                 System.out.println(username + "  "+ password);
@@ -128,8 +130,7 @@ public class NewUserActivity extends Activity {
                     new Response.ErrorListener()
                     {
                         @Override
-                        public void onErrorResponse(VolleyError error)
-                        {
+                        public void onErrorResponse(VolleyError error) {
                             System.out.println(error.getLocalizedMessage());
                         }
                     }
@@ -138,8 +139,7 @@ public class NewUserActivity extends Activity {
             }
 
     }
-    public void goNext()
-    {
+    public void goNext() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 

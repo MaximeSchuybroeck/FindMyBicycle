@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
@@ -73,7 +72,8 @@ public class LoginActivity extends Activity {
                                     if (username.equals(usernameFromDb) && password.equals(passwordFromDb))
                                     {
                                         UserProfile user = new UserProfile(username, password);
-                                        app.setUser(user);
+                                        new App();
+                                        App.setUser(user);
                                         //send to MainActivity screen
                                         goNext();
 

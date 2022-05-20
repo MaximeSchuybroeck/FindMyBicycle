@@ -19,7 +19,7 @@ public class Bike implements BikeFeatures{
         this.name = name;
         this.description = description;
         bikeLocation = null;
-        setOwner(app.getUser());
+        setOwner(App.getUser());
     }
     @Override
     public String getName() {
@@ -43,12 +43,12 @@ public class Bike implements BikeFeatures{
 
     @Override
     public UserProfile getOwner() {
-        return app.getUser();
+        return App.getUser();
     }
 
     @Override
     public void setOwner(UserProfile userProfile) {
-        app.setUser(userProfile);
+        App.setUser(userProfile);
     }
 
     @Override

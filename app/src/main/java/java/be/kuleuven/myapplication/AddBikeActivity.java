@@ -20,9 +20,9 @@ public class AddBikeActivity extends Activity {
     @SuppressLint("SetTextI18n")
     public void addBike(String bikeName, String description) {
         TextView tv1 = (TextView)findViewById(R.id.actionMessage);
-        if (!bikeName.equals("Name") || !(app.getUser().isMemberBikeList(bikeName))) {
+        if (!bikeName.equals("Name") || !(App.getUser().isMemberBikeList(bikeName))) {
             tv1.setText("SUCCEEDED");
-            app.getUser().addStringBikeList(bikeName, description);
+            App.getUser().addStringBikeList(bikeName, description);
             // TODO: 19/05/2022 addbikelist probleem
         } else{
             tv1.setText("FAILED");

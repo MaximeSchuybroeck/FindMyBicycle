@@ -1,13 +1,13 @@
 package java.be.kuleuven.myapplication;
 
-public class app {
+public class App {
 
     private static Bike editBike;
     private static UserProfile user;
     private static String popUpTitle;
     private static String popUpMessage;
 
-    public app(){
+    public App(){
         user = new UserProfile("koenraad", "testwachtwoord");
         Bike testBike = new Bike("bike1", "test");
         setEditBike(testBike);
@@ -19,7 +19,7 @@ public class app {
     }
 
     public static void setEditBike(Bike editBike) {
-        app.editBike = editBike;
+        App.editBike = editBike;
     }
 /*
     //popUp message getters en setters

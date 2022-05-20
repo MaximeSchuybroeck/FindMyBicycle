@@ -158,7 +158,7 @@ public class BikeLocation extends AppCompatActivity implements View.OnClickListe
                                 latitudeFromDb = currentJSonObject.getString("latitude");
                                 System.out.println("longitude from db = " + longitudeFromDb);
                                 System.out.println("latitude from db = " + latitudeFromDb);
-                                if (app.getUser().getUserName().equals(ownerFromDb))
+                                if (App.getUser().getUserName().equals(ownerFromDb))
                                 {
                                     bikeLongitude = longitudeFromDb;
                                     bikeLatitude = latitudeFromDb;

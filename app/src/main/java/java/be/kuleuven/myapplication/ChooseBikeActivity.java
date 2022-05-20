@@ -12,9 +12,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
-import java.util.ArrayList;
-
-
 public class ChooseBikeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
@@ -34,7 +31,7 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
 
     public void goNextActivity()
     {
-        Intent intent = new Intent(this, EditBikeActivity2.class);
+        Intent intent = new Intent(this, EditBikeActivity.class);
         startActivity(intent);
     }
     @Override
@@ -42,12 +39,12 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
         String text = parent.getItemAtPosition(position).toString();
         ///Hier zit nog een fout in want rest werkt
         System.out.println("test1");
-        for (int i = 0; i < app.getUser().getBikeList().size(); i++)
+        for (int i = 0; i < App.getUser().getBikeList().size(); i++)
         {
             System.out.println("test2");
-            if (app.getUser().getBikeList().get(i).getName().equals(text))
+            if (App.getUser().getBikeList().get(i).getName().equals(text))
             {
-                app.setEditBike(app.getUser().getBikeList().get(i));
+                App.setEditBike(App.getUser().getBikeList().get(i));
                 System.out.println("test3");
             }
         }

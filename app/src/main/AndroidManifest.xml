@@ -48,9 +48,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".EditBikeActivity2"
-            android:exported="false" />
-        <activity
             android:name=".AccountActivity"
             android:exported="false" />
         <activity
