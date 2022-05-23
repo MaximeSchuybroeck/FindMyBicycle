@@ -80,9 +80,11 @@ public class LocationActivity2 extends AppCompatActivity {
                                 location.getLatitude(), location.getLongitude(), 1
                         );
                         //Set latitude on TextView
-                        String newText = Double.toString(addresses.get(0).getLongitude()) + "  , " + Double.toString(addresses.get(0).getLatitude());
+                        String newText = Double.toString(addresses.get(0).getLatitude()) + "  , " + Double.toString(addresses.get(0).getLongitude());
                         textView1.setText(newText);
                         ///ADD LOCATION TO DATABASE
+
+
 
                     }
                         catch (IOException e){
