@@ -2,6 +2,7 @@ package java.be.kuleuven.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,6 @@ import android.widget.Toast;
 
 
 public class ChooseBikeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,23 +29,24 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
 
     }
 
-    public void goNextActivity()
-    {
-        Intent intent = new Intent(this, EditBikeActivity.class);
-        startActivity(intent);
+    public void goNextActivity() {
+        if(App.getChooseBikeNextActivity().equals("edit")){
+            Intent intent = new Intent(this, EditBikeActivity.class);
+            startActivity(intent);
+        } else{
+            Intent intent = new Intent(this, LocationActivity .class);
+            startActivity(intent);
+        }
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
         ///Hier zit nog een fout in want rest werkt
-        System.out.println("test1");
         for (int i = 0; i < App.getUser().getBikeList().size(); i++)
         {
-            System.out.println("test2");
             if (App.getUser().getBikeList().get(i).getName().equals(text))
             {
                 App.setEditBike(App.getUser().getBikeList().get(i));
-                System.out.println("test3");
             }
         }
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
@@ -57,4 +58,5 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }

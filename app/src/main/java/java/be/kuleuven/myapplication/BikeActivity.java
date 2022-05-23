@@ -36,12 +36,14 @@ public class BikeActivity extends Activity {
 
     public void addLocation() {
         //go to select bike and automatically add the location of that instance to the selected bike
-        Intent intent = new Intent(this, LocationActivity.class);
+        App.setChooseBikeNextActivity("location");
+        Intent intent = new Intent(this, ChooseBikeActivity.class);
         startActivity(intent);
     }
 
     public void editBike() {
         //go to edit bike screen
+        App.setChooseBikeNextActivity("edit");
         Intent intent = new Intent(this, ChooseBikeActivity.class);
         startActivity(intent);
     }

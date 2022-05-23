@@ -105,8 +105,7 @@ public class LoginActivity extends Activity {
         startActivity(intent);
     }
 
-    public void goNext()
-    {
+    public void goNext() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
