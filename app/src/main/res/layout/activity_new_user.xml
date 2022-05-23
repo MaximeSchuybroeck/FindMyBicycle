@@ -82,7 +82,7 @@
         android:importantForAutofill="no"
         android:inputType="phone"
         android:minHeight="48dp"
-        android:text="@string/number"
+        android:text=""
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

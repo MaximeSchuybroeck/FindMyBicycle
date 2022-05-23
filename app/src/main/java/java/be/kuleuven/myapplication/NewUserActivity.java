@@ -33,6 +33,8 @@ public class NewUserActivity extends Activity {
     private RequestQueue requestQueue1;
     private String usernameFromDb;
     private int counter;
+    String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";
+    String postURL = "https://studev.groept.be";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,7 @@ public class NewUserActivity extends Activity {
     }
 
     private void checkInput(String username, String password, String pNumber){
-        if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password") || pNumber.equals("Number")){
+        if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password")){
             System.out.println("Wrong input try again");
             TextView tv1 = (TextView)findViewById(R.id.actionMessage);
             tv1.setText("FAILED");
@@ -65,8 +67,7 @@ public class NewUserActivity extends Activity {
             System.out.println(password);
             //add new user but first check if user doesn't exist
             requestQueue = Volley.newRequestQueue(this);
-            String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";
-            String postURL = "https://studev.groept.be";
+
             StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
                     new Response.Listener<String>() {
                         @Override
@@ -90,27 +91,18 @@ public class NewUserActivity extends Activity {
                                         //add user to database !!!!!!!!!!Nog niet af
                                         UserProfile newProfile = new UserProfile(username, password);
                                         new App();
+                                        addUserToDb(username, password);
                                         App.setUser(newProfile);
                                         goNext();
-                                        StringRequest addRequest = new StringRequest(Request.Method.POST, requestURL,
-                                                response1 -> Toast.makeText(NewUserActivity.this, "Succes", Toast.LENGTH_LONG).show(),
-                                                error -> Toast.makeText(NewUserActivity.this, "Error", Toast.LENGTH_LONG).show()){
-                                            @Override
-                                            protected Map<String, String> getParams() throws AuthFailureError{
-                                                Map<String, String> params = new HashMap<>();
-                                                params.put("Username", username );
-                                                params.put("Password", password);
-                                                return params;
-                                            }
-                                            };
-                                        requestQueue1 = Volley.newRequestQueue(NewUserActivity.this);
-                                        requestQueue1.add(addRequest);
+
+
                                         }
                                     else
                                     {
                                         //make user and set it to active user
                                         UserProfile newProfile = new UserProfile(username,password, pNumber);
                                         new App();
+                                        addUserToDb(username, password, pNumber);
                                         App.setUser(newProfile);
                                         goNext();
                                         // add user to db
@@ -140,6 +132,66 @@ public class NewUserActivity extends Activity {
             );
             requestQueue.add(submitRequest);
             }
+
+    }
+    public void addUserToDb(String username, String password, String pNumber)
+    {
+        requestQueue1 = Volley.newRequestQueue(this);
+        String requestURL = "https://studev.groept.be/api/a21pt112/addUser";
+        requestURL = requestURL + "/" + username + "/" + password + "/" + pNumber;
+        StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+
+
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueue1.add(submitRequest);
+    }
+
+    public void addUserToDb(String username, String password)
+    {
+        requestQueue1 = Volley.newRequestQueue(this);
+        String requestURL = "https://studev.groept.be/api/a21pt112/addUser1";
+        requestURL = requestURL + "/" + username + "/" + password;
+        StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+
+
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueue1.add(submitRequest);
 
     }
     public void goNext() {
