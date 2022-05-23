@@ -1,14 +1,32 @@
 package java.be.kuleuven.myapplication;
 
+import static java.security.AccessController.getContext;
+
+import android.app.Activity;
+import android.content.Context;
+import android.util.Log;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
-public class UserProfile implements Profile
+public class UserProfile extends Activity implements Profile
 {
     private String userName;
     private String phoneNumber;
     protected String password;
     private static ArrayList<Bike> bikeList;
-
+    private RequestQueue requestQueue;
 
     public UserProfile( String userName, String newPassword, String newPhoneNumber){
         this.password = newPassword;
@@ -16,6 +34,7 @@ public class UserProfile implements Profile
         this.phoneNumber = newPhoneNumber;
         bikeList = new ArrayList<Bike>();
     }
+
     public UserProfile(String userName, String newPassword){
         this.userName = userName;
         this.password = newPassword;
@@ -55,23 +74,20 @@ public class UserProfile implements Profile
     }
     
     public ArrayList<Bike> getBikeList(){return bikeList;}
-    
+
     public void addBikeList(Bike bike){
         bikeList.add(bike);
-        // TODO: 2/05/2022 uploaden naar database 
-    }
-    public void addStringBikeList(String bikeName, String bikeDescription) {
-        Bike addBike = new Bike(bikeName, bikeDescription);
-        bikeList.add(addBike);
     }
 
-    public boolean isMemberBikeList(String bikeName){
+    public boolean isMemberBikeList(String bikeDiscription){
         for (int i = 0; i < bikeList.size(); i++){
-            if(bikeList.get(i).getName().equals(bikeName)){
+            if(bikeList.get(i).getDescription().equals(bikeDiscription)){
                 return true;
             }
         }
         return false;
     }
+
+
 
 }

@@ -8,9 +8,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -22,14 +20,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class NewUserActivity extends Activity {
     //private String userName;
     //private String phoneNumber;
     //protected String password;
-    private RequestQueue requestQueue;
+    private RequestQueue requestQueue2;
     private RequestQueue requestQueue1;
     private String usernameFromDb;
     private int counter;
@@ -66,7 +61,7 @@ public class NewUserActivity extends Activity {
             System.out.println(username);
             System.out.println(password);
             //add new user but first check if user doesn't exist
-            requestQueue = Volley.newRequestQueue(this);
+            requestQueue2 = Volley.newRequestQueue(this);
 
             StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
                     new Response.Listener<String>() {
@@ -130,7 +125,7 @@ public class NewUserActivity extends Activity {
                         }
                     }
             );
-            requestQueue.add(submitRequest);
+            requestQueue2.add(submitRequest);
             }
 
     }

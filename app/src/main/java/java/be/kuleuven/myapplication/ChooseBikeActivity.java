@@ -2,7 +2,6 @@ package java.be.kuleuven.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -44,7 +43,7 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
         ///Hier zit nog een fout in want rest werkt
         for (int i = 0; i < App.getUser().getBikeList().size(); i++)
         {
-            if (App.getUser().getBikeList().get(i).getName().equals(text))
+            if (App.getUser().getBikeList().get(i).getDescription().equals(text))
             {
                 App.setEditBike(App.getUser().getBikeList().get(i));
             }

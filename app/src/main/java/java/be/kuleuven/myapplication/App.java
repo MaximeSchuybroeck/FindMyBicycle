@@ -8,7 +8,7 @@ public class App {
 
     public App(){
         user = new UserProfile("koenraad", "testwachtwoord");
-        Bike testBike = new Bike("bike1", "test");
+        Bike testBike = new Bike(1, "test");
         setEditBike(testBike);
         user.getBikeList().add(testBike);
     }

@@ -2,7 +2,7 @@ package java.be.kuleuven.myapplication;
 
 
 public class Bike implements BikeFeatures{
-    private String name;
+    private int number;
     public BikeLocation bikeLocation;
     //public UserProfile owner;
     private String description;
@@ -15,20 +15,20 @@ public class Bike implements BikeFeatures{
     //    setOwner(app.getUser());
     //}
 
-    public Bike(String name,String description) {
-        this.name = name;
+    public Bike(int number, String description) {
+        this.number = number;
         this.description = description;
         bikeLocation = null;
         setOwner(App.getUser());
     }
     @Override
-    public String getName() {
-        return this.name;
+    public int getNumber() {
+        return this.number;
     }
 
     @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     @Override
@@ -60,6 +60,5 @@ public class Bike implements BikeFeatures{
     public String getDescription() {
         return this.description;
     }
-
 
 }
