@@ -10,7 +10,9 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,11 +20,28 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class LocationActivity extends Activity {
     public static final int REQUEST_LOCATION = 1;
     LocationManager locationManager;
     double longitude, latitude;
     TextView textView;
+    RequestQueue requestQueue;
+    String longitudeFromDB,latitudeFromDB;
+    String username, usernameFromDb;
+    FusedLocationProviderClient fusedLocationProviderClient;
     //TODO send location to the database
 
     @Override
@@ -36,6 +55,8 @@ public class LocationActivity extends Activity {
                 getLocation();
             }
         });
+
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         Button findLocationButton = (Button) findViewById(R.id.findLocation);
         findLocationButton.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +83,22 @@ public class LocationActivity extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void getLocation() {
+
+        //nieuwe code testen
+
+
+
+
+
+        //
+
+
+
+
+
+
+
+
         if (ActivityCompat.checkSelfPermission(LocationActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
                 (LocationActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -69,10 +106,13 @@ public class LocationActivity extends Activity {
             ActivityCompat.requestPermissions(LocationActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
 
         } else {
-            @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            @SuppressLint("MissingPermission")
+            Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
 
+            @SuppressLint("MissingPermission")
             Location location1 = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
+            @SuppressLint("MissingPermission")
             Location location2 = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
 
             if (location != null) {
@@ -121,9 +161,53 @@ public class LocationActivity extends Activity {
 
             public String getPosition()
             {
-                double longi = getLongitude();
-                double lati = getLatitude();
-                return ("position is" + "\n"+ "longitude: " + longi +  "\n" + "latitude:" + lati);
+                requestQueue = Volley.newRequestQueue(this);
+                String requestURL = "https://studev.groept.be/api/a21pt112/getLocationData";
+                StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONArray responseArray = new JSONArray(response);
+                                    for (int i = 0; i < responseArray.length(); i++) {
+                                        JSONObject currentJSonObject = responseArray.getJSONObject(i);
+                                        longitudeFromDB = currentJSonObject.getString("longitude");
+                                        latitudeFromDB = currentJSonObject.getString("latitude");
+                                        username = App.getUser().getUserName();
+                                        usernameFromDb = currentJSonObject.getString("owner");
+                                        System.out.println("longitude from db = " + longitudeFromDB + "\n" + "latitude from db = " + latitudeFromDB);
+                                        if (username.equals(usernameFromDb))
+                                        {
+                                            /////////////////////////////////
+                                            TextView tv1 = findViewById(R.id.textView);
+                                            AutoCompleteTextView tv2 = findViewById(R.id.autoCompleteTextView4);
+                                            String wantedLocation = longitudeFromDB + "," + latitudeFromDB;
+                                            tv2.setText(wantedLocation);
+
+                                        }
+                                    }
+                                    System.out.println(usernameFromDb);
+
+                                } catch (JSONException e) {
+                                    Log.e("database", e.getMessage(), e);
+                                }
+                            }
+                        },
+                        new Response.ErrorListener()
+                        {
+                            @Override
+                            public void onErrorResponse(VolleyError error)
+                            {
+                                System.out.println(error.getLocalizedMessage());
+                            }
+                        }
+                );
+                requestQueue.add(submitRequest);
+
+
+                longitude = getLongitude();
+                latitude = getLatitude();
+                return (longitude + "," + latitude);
             }
 
             public double getLongitude()
