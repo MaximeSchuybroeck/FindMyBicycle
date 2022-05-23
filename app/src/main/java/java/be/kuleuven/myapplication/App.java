@@ -8,22 +8,14 @@ public class App {
     private static String toBeDeletedBikeId;
 
     public App(){
-        user = new UserProfile("koenraad", "testwachtwoord");
-        //Bike testBike = new Bike(1, "test");
-        //setEditBike(testBike);
-        //user.getBikeList().add(testBike);
+        //user = new UserProfile("koenraad", "testwachtwoord");
     }
 
-    public static Bike getEditBike() {
-        return editBike;
-    }
+    //editBike get en set
+    public static Bike getEditBike() { return editBike;}
+    public static void setEditBike(Bike editBike) { App.editBike = editBike; }
 
-    public static void setEditBike(Bike editBike) {
-        App.editBike = editBike;
-    }
-
-
-    //userProfile getters en setters
+    //userProfile get en set
     public static UserProfile getUser(){ return user;}
     public static void setUser( UserProfile newUser){ user = newUser;}
 

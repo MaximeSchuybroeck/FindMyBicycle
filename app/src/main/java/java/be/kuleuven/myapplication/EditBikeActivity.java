@@ -28,7 +28,6 @@ public class EditBikeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_bike);
-
         //changeDescription
         Button editDescription = (Button) findViewById(R.id.editBikeDescription);
         AutoCompleteTextView descriptionEdit = findViewById(R.id.bicycle_description);
@@ -38,7 +37,6 @@ public class EditBikeActivity extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void changeDescription(String description) {
-        TextView tv3 = (TextView)findViewById(R.id.actionMessage);
         if(!description.isEmpty() && !description.equals(App.getEditBike().getDescription())){
             App.getEditBike().setDescription(description);
             //gets the id of the bike that needs to be deleted
@@ -50,8 +48,12 @@ public class EditBikeActivity extends Activity {
                         @Override
                         public void onResponse(String response) {
                             try {
-                                App.setToBeDeletedBikeId(response);
-                                //System.out.println("####################### test 1 getbikeID " + response);
+                                JSONArray responseArray = new JSONArray(response);
+                                JSONObject currentJSonObject = responseArray.getJSONObject(0);
+                                String bikeIdFromDb = currentJSonObject.getString("bike_id");
+                                App.setToBeDeletedBikeId(bikeIdFromDb);
+                                System.out.println("####################### test 1 getbikeID " + App.getToBeDeletedBikeId());
+                                System.out.println("####################### " + response);
                                 //deletes the old bike
                                 secondQueryDeleteBike();
                             } catch (Exception e) {
@@ -68,6 +70,7 @@ public class EditBikeActivity extends Activity {
             );
             requestQueue.add(submitRequest);
         } else{
+            TextView tv3 = (TextView)findViewById(R.id.actionMessage);
             tv3.setText("FAILED");
         }
 
@@ -77,13 +80,14 @@ public class EditBikeActivity extends Activity {
         requestQueue2 = Volley.newRequestQueue(this);
         String requestURL2 = "https://studev.groept.be/api/a21pt112/deleteBike";
         requestURL2 = requestURL2 + "/" + App.getToBeDeletedBikeId();
+        System.out.println(requestURL2);
         StringRequest submitRequest2 = new StringRequest(Request.Method.GET, requestURL2,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
                             JSONArray responseArray = new JSONArray(response);
-                            //System.out.println("####################### test 2 delete old bike ");
+                            System.out.println("####################### test 2 delete old bike ");
                             // adds the ajusted bike
                             thirdQueryAddBike();
                         } catch (JSONException e) {
@@ -114,7 +118,7 @@ public class EditBikeActivity extends Activity {
                             JSONArray responseArray = new JSONArray(response);
                             TextView tv3 = (TextView)findViewById(R.id.actionMessage);
                             tv3.setText("SUCCEEDED");
-                            //System.out.println("####################### test 3 addNewbike ");
+                            System.out.println("####################### test 3 addNewbike ");
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
                         }

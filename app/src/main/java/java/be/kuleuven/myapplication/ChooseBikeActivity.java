@@ -29,24 +29,27 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
     }
 
     public void goNextActivity() {
+        Intent intent;
         if(App.getChooseBikeNextActivity().equals("edit")){
-            Intent intent = new Intent(this, EditBikeActivity.class);
-            startActivity(intent);
+            intent = new Intent(this, EditBikeActivity.class);
         } else{
-            Intent intent = new Intent(this, LocationActivity2.class);
-            startActivity(intent);
+            intent = new Intent(this, LocationActivity2.class);
         }
+        startActivity(intent);
+
+
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
-        ///Hier zit nog een fout in want rest werkt
+        char number = parent.getItemAtPosition(position).toString().charAt(4);
+        //System.out.println("################################################## " + number);
         for (int i = 0; i < App.getUser().getBikeList().size(); i++)
         {
-            if (App.getUser().getBikeList().get(i).getDescription().equals(text))
+            System.out.println("------------------------------  " + App.getUser().getBikeList().get(i).getNumber());
+            if (App.getUser().getBikeList().get(i).getNumber().charAt(0) == (number))
             {
                 App.setEditBike(App.getUser().getBikeList().get(i));
-                System.out.println("############ " + App.getEditBike().getNumber());
             }
         }
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();

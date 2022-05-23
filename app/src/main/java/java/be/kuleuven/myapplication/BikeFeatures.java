@@ -1,8 +1,8 @@
 package java.be.kuleuven.myapplication;
 
 public interface BikeFeatures {
-    int getNumber();
-    void setNumber(int number);
+    String getNumber();
+    void setNumber(String number);
     BikeLocation getLocation();
     void setLocation(BikeLocation location);
     UserProfile getOwner();

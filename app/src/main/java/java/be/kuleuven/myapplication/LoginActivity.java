@@ -119,15 +119,15 @@ public class LoginActivity extends Activity {
                     public void onResponse(String response) {
                         try {
                             JSONArray responseArray = new JSONArray(response);
-                            ArrayList<Bike> addList = new ArrayList<Bike>();
+                            ArrayList<Bike> addList = new ArrayList<>();
                             for (int i = 0; i < responseArray.length(); i++) {
                                 JSONObject currentJSonObject = responseArray.getJSONObject(i);
                                 bikeDisFromDb = currentJSonObject.getString("description");
-                                Bike addBike = new Bike(i + 1, bikeDisFromDb);
+                                Bike addBike = new Bike(Integer.toString(i + 1), bikeDisFromDb);
                                 addList.add(addBike);
-                                goNext();
                             }
                             App.getUser().setBikeList(addList);
+                            goNext();
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
                         }
