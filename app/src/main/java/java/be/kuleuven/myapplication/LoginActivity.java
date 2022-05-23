@@ -50,11 +50,6 @@ public class LoginActivity extends Activity {
 
 
         }else{
-            System.out.println();
-            System.out.println(username);
-            System.out.println(password);
-            System.out.println();
-
 
             requestQueue = Volley.newRequestQueue(this);
             String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";

@@ -82,6 +82,7 @@
     <string name="choose_bicycle_text">Choose bicycle</string>
     <string name="choose_bike_text">Choose Bike</string>
     <string name="next1">Next</string>
+    <string name="coordinates">Coordinates:</string>
 
 
     <!-- Strings used for the dropdown menu of choose bicycle -->
