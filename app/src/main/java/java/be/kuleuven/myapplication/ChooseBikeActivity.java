@@ -2,7 +2,6 @@ package java.be.kuleuven.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +33,7 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
             Intent intent = new Intent(this, EditBikeActivity.class);
             startActivity(intent);
         } else{
-            Intent intent = new Intent(this, LocationActivity .class);
+            Intent intent = new Intent(this, LocationActivity2.class);
             startActivity(intent);
         }
     }
