@@ -74,7 +74,7 @@ public class LoginActivity extends Activity {
                                         UserProfile user = new UserProfile(username, password);
                                         new App();
                                         App.setUser(user);
-                                        loadBikeList();
+                                        secondQueryLoadBikeList();
                                     }
                                 }
                                 System.out.println(usernameFromDb + "  " + passwordFromDb);
@@ -109,7 +109,7 @@ public class LoginActivity extends Activity {
         startActivity(intent);
     }
 
-    public void loadBikeList(){
+    public void secondQueryLoadBikeList(){
         requestQueue2 = Volley.newRequestQueue(this);
         String requestURL2 = "https://studev.groept.be/api/a21pt112/getBikeFromUsername";
         requestURL2 = requestURL2 + "/" + App.getUser().getUserName();

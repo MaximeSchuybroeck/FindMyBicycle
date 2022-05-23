@@ -51,7 +51,9 @@ public class EditBikeActivity extends Activity {
                         public void onResponse(String response) {
                             try {
                                 App.setToBeDeletedBikeId(response);
-                                System.out.println("####################### test 1 getbikeID " + response);
+                                //System.out.println("####################### test 1 getbikeID " + response);
+                                //deletes the old bike
+                                secondQueryDeleteBike();
                             } catch (Exception e) {
                                 Log.e("database", e.getMessage(), e);
                             }
@@ -65,61 +67,68 @@ public class EditBikeActivity extends Activity {
                     }
             );
             requestQueue.add(submitRequest);
-            //deletes the old bike
-            requestQueue2 = Volley.newRequestQueue(this);
-            String requestURL2 = "https://studev.groept.be/api/a21pt112/deleteBike";
-            requestURL2 = requestURL2 + "/" + App.getToBeDeletedBikeId();
-            StringRequest submitRequest2 = new StringRequest(Request.Method.GET, requestURL2,
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                JSONArray responseArray = new JSONArray(response);
-                                System.out.println("####################### test 2 delete old bike ");
-                            } catch (JSONException e) {
-                                Log.e("database", e.getMessage(), e);
-                            }
-                        }
-                    },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            System.out.println(error.getLocalizedMessage());
-                        }
-                    }
-            );
-            requestQueue2.add(submitRequest2);
-            // adds the ajusted bike
-            requestQueue3 = Volley.newRequestQueue(this);
-            String requestURL3 = "https://studev.groept.be/api/a21pt112/addBike";
-            requestURL3 = requestURL3 + "/" + App.getUser().getUserName() + "/" + description + "/" + App.getEditBike().getNumber();
-            StringRequest submitRequest3 = new StringRequest(Request.Method.GET, requestURL3,
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                JSONArray responseArray = new JSONArray(response);
-                                System.out.println("####################### test 3 addNewbike ");
-                            } catch (JSONException e) {
-                                Log.e("database", e.getMessage(), e);
-                            }
-                        }
-                    },
-                    new Response.ErrorListener()
-                    {
-                        @Override
-                        public void onErrorResponse(VolleyError error)
-                        {
-                            System.out.println(error.getLocalizedMessage());
-                        }
-                    }
-            );
-            requestQueue3.add(submitRequest3);
-
-            tv3.setText("SUCCEEDED");
         } else{
             tv3.setText("FAILED");
         }
 
+    }
+    public void secondQueryDeleteBike(){
+        //deletes the old bike
+        requestQueue2 = Volley.newRequestQueue(this);
+        String requestURL2 = "https://studev.groept.be/api/a21pt112/deleteBike";
+        requestURL2 = requestURL2 + "/" + App.getToBeDeletedBikeId();
+        StringRequest submitRequest2 = new StringRequest(Request.Method.GET, requestURL2,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+                            //System.out.println("####################### test 2 delete old bike ");
+                            // adds the ajusted bike
+                            thirdQueryAddBike();
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueue2.add(submitRequest2);
+    }
+
+    public void thirdQueryAddBike(){
+        // adds the ajusted bike
+        requestQueue3 = Volley.newRequestQueue(this);
+        String requestURL3 = "https://studev.groept.be/api/a21pt112/addBike";
+        requestURL3 = requestURL3 + "/" + App.getUser().getUserName() + "/" + App.getEditBike().getDescription() + "/" + App.getEditBike().getNumber();
+        StringRequest submitRequest3 = new StringRequest(Request.Method.GET, requestURL3,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+                            TextView tv3 = (TextView)findViewById(R.id.actionMessage);
+                            tv3.setText("SUCCEEDED");
+                            //System.out.println("####################### test 3 addNewbike ");
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueue3.add(submitRequest3);
     }
 }
