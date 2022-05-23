@@ -52,11 +52,9 @@ public class AddBikeActivity extends Activity {
                             }
                         }
                     },
-                    new Response.ErrorListener()
-                    {
+                    new Response.ErrorListener() {
                         @Override
-                        public void onErrorResponse(VolleyError error)
-                        {
+                        public void onErrorResponse(VolleyError error) {
                             System.out.println(error.getLocalizedMessage());
                         }
                     }

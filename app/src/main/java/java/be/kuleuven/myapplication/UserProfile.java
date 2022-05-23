@@ -74,10 +74,12 @@ public class UserProfile extends Activity implements Profile
     }
     
     public ArrayList<Bike> getBikeList(){return bikeList;}
+    public void setBikeList(ArrayList<Bike> newList){
+        bikeList = newList;
+    }
 
     public void addBikeList(Bike bike){
-
-        //bikeList.add(bike);
+        bikeList.add(bike);
     }
 
     public boolean isMemberBikeList(String bikeDiscription){

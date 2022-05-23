@@ -16,13 +16,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 
 public class LoginActivity extends Activity {
     // dit is klaar enkel nog de link tussen de database leggen bij login
     private UserProfile userProfile;
     private RequestQueue requestQueue;
+    private RequestQueue requestQueue2;
     private String usernameFromDb;
     private String passwordFromDb;
+    private String bikeNumFromDb;
+    private String bikeDisFromDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,7 +95,38 @@ public class LoginActivity extends Activity {
                         }
                     }
             );
-        requestQueue.add(submitRequest);
+            requestQueue.add(submitRequest);
+            //loads the bikelist
+            requestQueue2 = Volley.newRequestQueue(this);
+            String requestURL2 = "https://studev.groept.be/api/a21pt112/getBikeFromUsername";
+            requestURL2 = requestURL2 + "/" + App.getUser().getUserName();
+            StringRequest submitRequest2 = new StringRequest(Request.Method.GET, requestURL2,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONArray responseArray = new JSONArray(response);
+                                ArrayList<Bike> addList = new ArrayList<Bike>();
+                                for (int i = 0; i < responseArray.length(); i++) {
+                                    JSONObject currentJSonObject = responseArray.getJSONObject(i);
+                                    bikeDisFromDb = currentJSonObject.getString("description");
+                                    Bike addBike = new Bike(i + 1, bikeDisFromDb);
+                                    addList.add(addBike);
+                                }
+                                App.getUser().setBikeList(addList);
+                            } catch (JSONException e) {
+                                Log.e("database", e.getMessage(), e);
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            System.out.println(error.getLocalizedMessage());
+                        }
+                    }
+            );
+            requestQueue2.add(submitRequest2);
         }
     }
 

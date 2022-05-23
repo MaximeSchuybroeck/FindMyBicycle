@@ -5,12 +5,13 @@ public class App {
     private static Bike editBike;
     private static UserProfile user;
     private static String chooseBikeNextActivity;
+    private static String toBeDeletedBikeId;
 
     public App(){
         user = new UserProfile("koenraad", "testwachtwoord");
-        Bike testBike = new Bike(1, "test");
-        setEditBike(testBike);
-        user.getBikeList().add(testBike);
+        //Bike testBike = new Bike(1, "test");
+        //setEditBike(testBike);
+        //user.getBikeList().add(testBike);
     }
 
     public static Bike getEditBike() {
@@ -30,7 +31,9 @@ public class App {
     public static String getChooseBikeNextActivity() {
         return chooseBikeNextActivity;
     }
-    public static void setChooseBikeNextActivity(String chooseBikeNextActivity) {
-        App.chooseBikeNextActivity = chooseBikeNextActivity;
-    }
+    public static void setChooseBikeNextActivity(String chooseBikeNextActivity) {App.chooseBikeNextActivity = chooseBikeNextActivity;}
+
+    //toBeDeletedBikeId get en set
+    public static String getToBeDeletedBikeId() { return toBeDeletedBikeId;}
+    public static void setToBeDeletedBikeId(String toBeDeletedBikeId) { App.toBeDeletedBikeId = toBeDeletedBikeId;}
 }

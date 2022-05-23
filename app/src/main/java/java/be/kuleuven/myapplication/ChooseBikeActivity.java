@@ -46,6 +46,7 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
             if (App.getUser().getBikeList().get(i).getDescription().equals(text))
             {
                 App.setEditBike(App.getUser().getBikeList().get(i));
+                System.out.println("############ " + App.getEditBike().getNumber());
             }
         }
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
