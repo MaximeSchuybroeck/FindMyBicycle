@@ -101,9 +101,11 @@ public class LocationActivity extends Activity {
                 Toast.makeText(this, "Unable to Trace your location", Toast.LENGTH_SHORT).show();
 
             }
+
+
         }
-        Intent intent = new Intent(this, MapsActivity.class);
-        startActivity(intent);
+        System.out.println("longitude and latitude is :" + longitude + latitude);
+
     }
 
             protected void buildAlertMessageNoGps () {

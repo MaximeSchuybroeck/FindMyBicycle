@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -42,6 +43,7 @@ public class NewUserActivity extends Activity {
         EditText UserNameEdit = findViewById(R.id.usernameInput2);
         EditText PasswordEdit = findViewById(R.id.passwordInput2);
         EditText PNumberEdit = findViewById(R.id.pNumberInput2);
+
         SubmitButton.setOnClickListener(v -> checkInput(UserNameEdit.getText().toString(), PasswordEdit.getText().toString(), PNumberEdit.getText().toString()));
         MediaPlayer mp = MediaPlayer.create(NewUserActivity.this, R.raw.queen_bicycle);
         mp.start();
@@ -50,7 +52,8 @@ public class NewUserActivity extends Activity {
     private void checkInput(String username, String password, String pNumber){
         if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password") || pNumber.equals("Number")){
             System.out.println("Wrong input try again");
-
+            TextView tv1 = (TextView)findViewById(R.id.actionMessage);
+            tv1.setText("FAILED");
         }
 
 
@@ -85,6 +88,10 @@ public class NewUserActivity extends Activity {
                                     // choose constructor based on pNumber
                                     if (pNumber.equals("")) {
                                         //add user to database !!!!!!!!!!Nog niet af
+                                        UserProfile newProfile = new UserProfile(username, password);
+                                        new App();
+                                        App.setUser(newProfile);
+                                        goNext();
                                         StringRequest addRequest = new StringRequest(Request.Method.POST, requestURL,
                                                 response1 -> Toast.makeText(NewUserActivity.this, "Succes", Toast.LENGTH_LONG).show(),
                                                 error -> Toast.makeText(NewUserActivity.this, "Error", Toast.LENGTH_LONG).show()){
@@ -99,27 +106,23 @@ public class NewUserActivity extends Activity {
                                         requestQueue1 = Volley.newRequestQueue(NewUserActivity.this);
                                         requestQueue1.add(addRequest);
                                         }
-
-
-
-                                        //make user and set it to active user
-                                        UserProfile newProfile = new UserProfile(username, password);
-                                        new App();
-                                        App.setUser(newProfile);
-                                        goNext();
-                                    }
                                     else
                                     {
-                                        //ad user to database
-
-
-
-                                        //make user to active user
-                                        UserProfile newProfile = new UserProfile(username, password, pNumber);
+                                        //make user and set it to active user
+                                        UserProfile newProfile = new UserProfile(username,password, pNumber);
                                         new App();
                                         App.setUser(newProfile);
                                         goNext();
+                                        // add user to db
+
                                     }
+                                }
+                                else
+                                {
+                                    TextView tv1 = (TextView)findViewById(R.id.actionMessage);
+                                    tv1.setText("FAILED");
+                                }
+
                                 System.out.println(username + "  "+ password);
                                 }
                             catch (JSONException e) {
