@@ -36,7 +36,6 @@ public class AddBikeActivity extends Activity {
             Bike addBike = new Bike(App.getUser().getBikeList().size() + 1, description);
             App.getUser().addBikeList(addBike);
             //database toevoegen
-            /*
             requestQueue = Volley.newRequestQueue(this);
             String requestURL = "https://studev.groept.be/api/a21pt112/addBike";
             requestURL = requestURL + "/" + App.getUser().getUserName() + "/" + addBike.getDescription() + "/" + addBike.getNumber();
@@ -64,7 +63,6 @@ public class AddBikeActivity extends Activity {
             );
             requestQueue.add(submitRequest);
 
-             */
             tv1.setText("SUCCEEDED");
         } else{
             tv1.setText("FAILED");
