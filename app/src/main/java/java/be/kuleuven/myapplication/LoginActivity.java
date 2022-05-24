@@ -26,7 +26,7 @@ public class LoginActivity extends Activity {
     private RequestQueue requestQueue2;
     private String usernameFromDb;
     private String passwordFromDb;
-    private String bikeNumFromDb;
+    private String phoneNumberFromDb;
     private String bikeDisFromDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +68,17 @@ public class LoginActivity extends Activity {
                                     JSONObject currentJSonObject = responseArray.getJSONObject(i);
                                     usernameFromDb = currentJSonObject.getString("username");
                                     passwordFromDb = currentJSonObject.getString("password");
+                                    phoneNumberFromDb = currentJSonObject.getString("phonenumber");
                                     System.out.println("username from db = " + usernameFromDb);
                                     if (username.equals(usernameFromDb) && password.equals(passwordFromDb))
                                     {
                                         UserProfile user = new UserProfile(username, password);
                                         new App();
                                         App.setUser(user);
+                                        if (phoneNumberFromDb != null)
+                                        {
+                                            App.getUser().setPhoneNumber(phoneNumberFromDb);
+                                        }
                                         secondQueryLoadBikeList();
                                     }
                                 }

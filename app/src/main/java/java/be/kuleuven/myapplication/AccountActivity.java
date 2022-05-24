@@ -2,21 +2,31 @@ package java.be.kuleuven.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class AccountActivity extends Activity {
+    RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
-        //editUsername
-        Button editUsernameButton = findViewById(R.id.editUsername);
-        AutoCompleteTextView userNameEdit = findViewById(R.id.autoCompleteTextView);
+
+        TextView userNameEdit = findViewById(R.id.autoCompleteTextView);
         userNameEdit.setText(App.getUser().getUserName());
-        editUsernameButton.setOnClickListener(v -> editUsername(userNameEdit.getText().toString()));
+
 
         //editPassword
         Button editPasswordButton = findViewById(R.id.editPassword);
@@ -36,6 +46,9 @@ public class AccountActivity extends Activity {
     private void editPNumber(String newPNumber) {
         if (!newPNumber.isEmpty() || !newPNumber.equals(App.getUser().getPhoneNumber())){
             App.getUser().setPhoneNumber(newPNumber);
+            String requestURL = "https://studev.groept.be/api/a21pt112/updatePhonenumber";
+            requestURL += "/" + newPNumber;
+            queryMethod(requestURL);
 
         }
     }
@@ -43,12 +56,33 @@ public class AccountActivity extends Activity {
     private void editPassword(String newPassword) {
         if (!newPassword.isEmpty() || !newPassword.equals(App.getUser().getPassword())){
             App.getUser().setPassword(newPassword);
+            String requestURL = "https://studev.groept.be/api/a21pt112/updatePassword";
+            requestURL += "/" + newPassword;
+            queryMethod(requestURL);
         }
     }
 
-    private void editUsername(String newName) {
-        if (!newName.isEmpty() || !newName.equals(App.getUser().getUserName())){
-            App.getUser().setUserName(newName);
-        }
+    public void queryMethod(String requestURL)
+    {
+        requestQueue = Volley.newRequestQueue(this);
+        requestURL += "/" + App.getUser().getUserName();
+
+        // for testing
+        System.out.println(requestURL);
+
+        //query for db
+        StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
+                response -> {
+                    try {
+                        JSONArray responseArray = new JSONArray(response);
+                        System.out.println("user edited!");
+
+                    } catch (JSONException e) {
+                        Log.e("database", e.getMessage(), e);
+                    }
+                },
+                error -> System.out.println(error.getLocalizedMessage()));
+        requestQueue.add(submitRequest);
     }
+
 }
