@@ -8,6 +8,10 @@
     >
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/textPhonenumber"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -20,6 +24,10 @@
         app:layout_constraintTop_toBottomOf="@+id/usernameInput2" />
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/textPhonenumber2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -32,6 +40,10 @@
         app:layout_constraintTop_toBottomOf="@+id/pNumberInput2" />
 
     <EditText
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/usernameInput2"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
@@ -49,6 +61,10 @@
         tools:ignore="LabelFor" />
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/textUserName2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -61,11 +77,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/textWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome2"
-        android:textColor="@color/design_default_color_secondary"
+        android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,6 +101,10 @@
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="phone"
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:minHeight="48dp"
         android:text=""
         android:textColor="@color/black"
@@ -93,6 +117,10 @@
         tools:ignore="LabelFor" />
 
     <EditText
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/passwordInput2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,6 +149,7 @@
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

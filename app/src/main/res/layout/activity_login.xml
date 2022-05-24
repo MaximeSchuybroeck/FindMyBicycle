@@ -8,6 +8,10 @@
     >
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/textUserName"
         android:layout_width="94dp"
         android:layout_height="30dp"
@@ -21,6 +25,10 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/passwordInput"
         android:layout_width="211dp"
         android:layout_height="48dp"
@@ -36,6 +44,10 @@
         tools:ignore="LabelFor" />
 
     <EditText
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/usernameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,8 +71,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/find_my_bicycle"
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
+
         android:textAlignment="center"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +86,10 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <TextView
+        android:shadowColor="#000000"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="2.0"
         android:id="@+id/textPassword"
         android:layout_width="94dp"
         android:layout_height="30dp"
@@ -97,6 +118,7 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
         android:onClick="login"
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/newUserButton"
