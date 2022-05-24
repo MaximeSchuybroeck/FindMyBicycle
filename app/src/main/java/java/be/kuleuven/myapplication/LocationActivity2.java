@@ -255,15 +255,15 @@ public class LocationActivity2 extends AppCompatActivity {
                             longitude = responseArray.getJSONObject(0).getString("longitude");
                             latitude = responseArray.getJSONObject(0).getString("latitude");
                             System.out.println("location retrieved");
-                            if (latitude != null && latitude != null) {
-                                String retrievedLocation = latitude + " , " + longitude;
-                                textView1.setText(retrievedLocation);
+                            String retrievedLocation;
+                            if (!latitude.equals("null")) {
+                                retrievedLocation = latitude + " , " + longitude;
                             }
                             else
                             {
-                                String retrievedLocation = "No location registered yet!";
-                                textView1.setText(retrievedLocation);
+                                retrievedLocation = "No location registered yet!";
                             }
+                            textView1.setText(retrievedLocation);
 
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
