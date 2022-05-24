@@ -86,7 +86,7 @@
         android:id="@+id/newUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="addUser"
+        android:onClick="addBike"
         android:text="@string/new_user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
