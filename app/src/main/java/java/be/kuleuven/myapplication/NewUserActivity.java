@@ -21,28 +21,26 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class NewUserActivity extends Activity {
-    //private String userName;
-    //private String phoneNumber;
-    //protected String password;
+
     private RequestQueue requestQueue2;
     private RequestQueue requestQueue1;
     private String usernameFromDb;
     private int counter;
+    MediaPlayer mp;
     String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";
-    String postURL = "https://studev.groept.be";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
-        // UserProfile newUser = new UserProfile("", "", "");
-        //submit button
+
         Button SubmitButton = findViewById(R.id.submitButton);
         EditText UserNameEdit = findViewById(R.id.usernameInput2);
         EditText PasswordEdit = findViewById(R.id.passwordInput2);
         EditText PNumberEdit = findViewById(R.id.pNumberInput2);
-
         SubmitButton.setOnClickListener(v -> checkInput(UserNameEdit.getText().toString(), PasswordEdit.getText().toString(), PNumberEdit.getText().toString()));
-        MediaPlayer mp = MediaPlayer.create(NewUserActivity.this, R.raw.queen_bicycle);
+
+        mp = MediaPlayer.create(NewUserActivity.this, R.raw.queen_bicycle);
         mp.start();
     }
 
@@ -190,6 +188,7 @@ public class NewUserActivity extends Activity {
 
     }
     public void goNext() {
+        mp.release();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 

@@ -15,6 +15,7 @@ import android.util.Log;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -44,7 +45,7 @@ public class LocationActivity2 extends AppCompatActivity {
     RequestQueue requestQueueToAdd;
     RequestQueue requestQueueForDelete;
     RequestQueue idRequestQueue;
-    String username, id, description, bikeNumber;
+    String username, bikeIdFromDb, description, bikeNumber;
     String longitude, latitude;
 
     @Override
@@ -58,7 +59,7 @@ public class LocationActivity2 extends AppCompatActivity {
         textView2 = findViewById(R.id.textView5);
         bt_add_location = findViewById(R.id.bt_add_location);
 
-        btLocation.setOnClickListener(v -> getCurrentBikeLocation());
+        btLocation.setOnClickListener(v -> getBikeID());
 
 
         //used to get current location
@@ -113,6 +114,7 @@ public class LocationActivity2 extends AppCompatActivity {
                         description = App.getEditBike().getDescription();
                         bikeNumber = App.getEditBike().getNumber();
 
+
                         // get bike id
                         idRequestQueue = Volley.newRequestQueue(LocationActivity2.this);
                         String idURL = "https://studev.groept.be/api/a21pt112/getBikeId";
@@ -123,9 +125,8 @@ public class LocationActivity2 extends AppCompatActivity {
                                     public void onResponse(String response) {
                                         try {
                                             JSONArray responseArray = new JSONArray(response);
-                                            String bikeIdFromDb = responseArray.getJSONObject(0).getString("bike_id");
+                                            bikeIdFromDb = responseArray.getJSONObject(0).getString("bike_id");
                                             App.setToBeDeletedBikeId(bikeIdFromDb);
-                                            System.out.println("############## test 1 succeeded");
                                             deleteOldBike();
                                         } catch (JSONException e) {
                                             Log.e("database", e.getMessage(), e);
@@ -151,6 +152,39 @@ public class LocationActivity2 extends AppCompatActivity {
         });
     }
 
+    private void getBikeID()
+    {
+        // get bike id
+        idRequestQueue = Volley.newRequestQueue(LocationActivity2.this);
+        username = App.getUser().getUserName();
+        bikeNumber = App.getEditBike().getNumber();
+        String idURL = "https://studev.groept.be/api/a21pt112/getBikeId";
+        idURL += "/" + username + "/" + bikeNumber;
+        StringRequest idRequest = new StringRequest(Request.Method.GET, idURL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+                            bikeIdFromDb = responseArray.getJSONObject(0).getString("bike_id");
+                            getCurrentBikeLocation();
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        idRequestQueue.add(idRequest);
+    }
+
     private void deleteOldBike() {
         //deletes the old bike
         requestQueueForDelete = Volley.newRequestQueue(this);
@@ -163,7 +197,7 @@ public class LocationActivity2 extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONArray responseArray = new JSONArray(response);
-                            System.out.println("####################### test 2 delete old bike ");
+
                             // adds the ajusted bike
                             addBike();
                         } catch (JSONException e) {
@@ -192,7 +226,9 @@ public class LocationActivity2 extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         System.out.println("location added");
-                        System.out.println("############## test 3 succeeded");
+                        Toast.makeText(LocationActivity2.this, "location added", Toast.LENGTH_SHORT).show();
+
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -208,7 +244,8 @@ public class LocationActivity2 extends AppCompatActivity {
     public void getCurrentBikeLocation() {
         requestQueueToAdd = Volley.newRequestQueue(LocationActivity2.this);
         String getLocationURL = "https://studev.groept.be/api/a21pt112/getLocationId";
-        getLocationURL += "/" + App.getEditBike().getNumber();
+        getLocationURL += "/" + bikeIdFromDb;
+        System.out.println(getLocationURL);
         StringRequest addRequest = new StringRequest(Request.Method.GET, getLocationURL,
                 new Response.Listener<String>() {
                     @Override
@@ -218,8 +255,16 @@ public class LocationActivity2 extends AppCompatActivity {
                             longitude = responseArray.getJSONObject(0).getString("longitude");
                             latitude = responseArray.getJSONObject(0).getString("latitude");
                             System.out.println("location retrieved");
-                            String retrievedLocation = latitude + " , " + longitude;
-                            textView1.setText(retrievedLocation);
+                            if (latitude != null && latitude != null) {
+                                String retrievedLocation = latitude + " , " + longitude;
+                                textView1.setText(retrievedLocation);
+                            }
+                            else
+                            {
+                                String retrievedLocation = "No location registered yet!";
+                                textView1.setText(retrievedLocation);
+                            }
+
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
                         }

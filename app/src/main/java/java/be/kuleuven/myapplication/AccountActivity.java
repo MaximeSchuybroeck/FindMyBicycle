@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -76,6 +77,7 @@ public class AccountActivity extends Activity {
                     try {
                         JSONArray responseArray = new JSONArray(response);
                         System.out.println("user edited!");
+                        Toast.makeText(this, "user edited!", Toast.LENGTH_SHORT).show();
 
                     } catch (JSONException e) {
                         Log.e("database", e.getMessage(), e);

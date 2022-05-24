@@ -28,10 +28,12 @@ public class LoginActivity extends Activity {
     private String passwordFromDb;
     private String phoneNumberFromDb;
     private String bikeDisFromDb;
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         // New User button
         Button addUserButton = findViewById(R.id.newUserButton);
         addUserButton.setOnClickListener(v -> goNewUserActivity());
@@ -40,22 +42,24 @@ public class LoginActivity extends Activity {
         EditText UserNameEdit = findViewById(R.id.usernameInput);
         EditText PasswordEdit = findViewById(R.id.passwordInput);
         loginButton.setOnClickListener(v -> login(UserNameEdit.getText().toString(), PasswordEdit.getText().toString()));
-        //music
-        MediaPlayer mp = MediaPlayer.create(LoginActivity.this, R.raw.queen_bicycle);
-        mp.start();
 
+        //music
+        mp = MediaPlayer.create(LoginActivity.this, R.raw.queen_bicycle);
+        mp.start();
+        System.out.println("test1");
     }
     // check login input with the database, if ok forwards to MainActivity screen
     public void login(String username, String password){
         if(username.isEmpty() || username.equals("Username") || password.isEmpty() || password.equals("Password")){
             System.out.println("wrong input");
+            System.out.println("test2");
             //get data from database
 
 
 
 
         }else{
-
+            System.out.println("test3");
             requestQueue = Volley.newRequestQueue(this);
             String requestURL = "https://studev.groept.be/api/a21pt112/getLoginData";
             StringRequest submitRequest = new StringRequest(Request.Method.GET, requestURL,
@@ -99,22 +103,27 @@ public class LoginActivity extends Activity {
                     }
             );
             requestQueue.add(submitRequest);
+            System.out.println("test4");
             //loads the bikelist
         }
     }
 
     // forward to NewUserActivity screen
     public void goNewUserActivity(){
+        mp.release();
         Intent intent = new Intent(this, NewUserActivity.class);
         startActivity(intent);
+
     }
 
     public void goNext() {
+        mp.release();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void secondQueryLoadBikeList(){
+        System.out.println("test5");
         requestQueue2 = Volley.newRequestQueue(this);
         String requestURL2 = "https://studev.groept.be/api/a21pt112/getBikeFromUsername";
         requestURL2 = requestURL2 + "/" + App.getUser().getUserName();

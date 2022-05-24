@@ -43,10 +43,10 @@ public class ChooseBikeActivity extends AppCompatActivity implements AdapterView
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
         char number = parent.getItemAtPosition(position).toString().charAt(4);
-        //System.out.println("################################################## " + number);
+
         for (int i = 0; i < App.getUser().getBikeList().size(); i++)
         {
-            System.out.println("------------------------------  " + App.getUser().getBikeList().get(i).getNumber());
+
             if (App.getUser().getBikeList().get(i).getNumber().charAt(0) == (number))
             {
                 App.setEditBike(App.getUser().getBikeList().get(i));
