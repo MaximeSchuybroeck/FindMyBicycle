@@ -33,7 +33,7 @@ public class AddBikeActivity extends Activity {
     public void addBike(String description) {
         TextView tv1 = (TextView)findViewById(R.id.actionMessage);
         if (!description.equals("Name") && !(App.getUser().isMemberBikeList(description))) {
-            Bike addBike = new Bike((char) (App.getUser().getBikeList().size() + 1) , description);
+            Bike addBike = new Bike( String.valueOf(App.getUser().getBikeList().size() + 1) , description);
             App.getUser().addBikeList(addBike);
             //database toevoegen
             requestQueue = Volley.newRequestQueue(this);
