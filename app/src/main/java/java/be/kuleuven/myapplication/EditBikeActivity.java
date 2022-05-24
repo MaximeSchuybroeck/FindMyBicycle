@@ -25,7 +25,7 @@ public class EditBikeActivity extends Activity {
     private RequestQueue requestQueue2;
     private RequestQueue requestQueue3;
     private RequestQueue requestQueue4;
-    private String username, bikeNumber,bikeIdFromDb, longitude, latitude ;
+    private String username, bikeNumber,bikeIdFromDb, bikeDescription, longitude, latitude ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,14 +62,14 @@ public class EditBikeActivity extends Activity {
                                 //get needed data to make new bike after it's edited
                                 username = App.getUser().getUserName();
                                 bikeNumber = App.getEditBike().getNumber();
+                                bikeDescription = App.getEditBike().getDescription();
                                 //bike id is retrieved from db in query above
 
                                 //method makes connection to Db and gets the location of the bike we're gonna change
                                 getLocationFromDb();
 
 
-                                //deletes the old bike
-                                secondQueryDeleteBike();
+
                             } catch (Exception e) {
                                 Log.e("database", e.getMessage(), e);
                             }
@@ -104,6 +104,9 @@ public class EditBikeActivity extends Activity {
                             JSONArray responseArray = new JSONArray(response);
                             longitude = responseArray.getJSONObject(0).getString("longitude");
                             latitude = responseArray.getJSONObject(0).getString("latitude");
+
+                            //deletes the old bike
+                            secondQueryDeleteBike();
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
                         }
@@ -134,7 +137,7 @@ public class EditBikeActivity extends Activity {
                         try {
                             JSONArray responseArray = new JSONArray(response);
 
-                            // adds the ajusted bike
+                            // adds the adjusted bike
                             thirdQueryAddBike();
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
@@ -156,6 +159,9 @@ public class EditBikeActivity extends Activity {
         requestQueue3 = Volley.newRequestQueue(this);
         String requestURL3 = "https://studev.groept.be/api/a21pt112/addBike";
         requestURL3 = requestURL3 + "/" + App.getUser().getUserName() + "/" + App.getEditBike().getDescription() + "/" + App.getEditBike().getNumber();
+
+
+
         StringRequest submitRequest3 = new StringRequest(Request.Method.GET, requestURL3,
                 new Response.Listener<String>() {
                     @Override
@@ -165,6 +171,8 @@ public class EditBikeActivity extends Activity {
                             TextView tv3 = (TextView)findViewById(R.id.actionMessage);
                             tv3.setText("SUCCEEDED");
                             System.out.println("####################### test 3 addNewbike ");
+                            //adds old location to the bike
+                            lastQueryAddLocationToBike();
                         } catch (JSONException e) {
                             Log.e("database", e.getMessage(), e);
                         }
@@ -181,4 +189,31 @@ public class EditBikeActivity extends Activity {
         );
         requestQueue3.add(submitRequest3);
     }
+
+    private void lastQueryAddLocationToBike() {
+        requestQueue4 = Volley.newRequestQueue(this);
+        String requestURL4 = "https://studev.groept.be/api/a21pt112/addLocation";
+        requestURL4 += "/" + username + "/" + bikeDescription + "/" + bikeNumber + "/" + longitude + "/" + latitude;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, requestURL4,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray responseArray = new JSONArray(response);
+                        } catch (JSONException e) {
+                            Log.e("database", e.getMessage(), e);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                });
+                requestQueue4.add(stringRequest);
+    }
+
+
 }
