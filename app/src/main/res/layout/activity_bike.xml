@@ -40,15 +40,14 @@
         android:id="@+id/editBicycle"
         android:layout_width="match_parent"
         android:layout_height="125dp"
-        android:layout_marginTop="204dp"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="204dp"
+        android:backgroundTint="#000000"
         android:text="@string/edit_bicycle"
         android:textAlignment="center"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="45dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/button"
@@ -57,6 +56,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#000000"
         android:text="@string/add_bicycle"
         android:textAlignment="center"
         android:textSize="40sp"
@@ -75,6 +75,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#000000"
         android:text="@string/add_location"
         android:textAlignment="center"
         android:textSize="40sp"
