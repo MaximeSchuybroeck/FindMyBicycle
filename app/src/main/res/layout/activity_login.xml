@@ -107,6 +107,7 @@
         android:id="@+id/newUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
         android:onClick="addBike"
         android:text="@string/new_user"
         app:layout_constraintBottom_toBottomOf="parent"
