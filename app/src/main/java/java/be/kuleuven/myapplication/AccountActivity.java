@@ -36,6 +36,7 @@ public class AccountActivity extends Activity {
     private void editPNumber(String newPNumber) {
         if (!newPNumber.isEmpty() || !newPNumber.equals(App.getUser().getPhoneNumber())){
             App.getUser().setPhoneNumber(newPNumber);
+
         }
     }
 

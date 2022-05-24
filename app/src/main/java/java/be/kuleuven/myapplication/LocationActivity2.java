@@ -45,7 +45,7 @@ public class LocationActivity2 extends AppCompatActivity {
     RequestQueue requestQueueToAdd;
     RequestQueue requestQueueForDelete;
     RequestQueue idRequestQueue;
-    String id;
+    String username, id, description, bikeNumber;
     String longitude, latitude;
 
     @Override
@@ -110,9 +110,9 @@ public class LocationActivity2 extends AppCompatActivity {
 
 
                         //get all needed data to delete data from database and add new data for location
-                        String username = App.getUser().getUserName();
-                        String description = App.getEditBike().getDescription();
-                        String bikeNumber = String.valueOf(App.getEditBike().getNumber());
+                        username = App.getUser().getUserName();
+                        description = App.getEditBike().getDescription();
+                        bikeNumber = String.valueOf(App.getEditBike().getNumber());
 
 
                         // get bike id
@@ -125,12 +125,15 @@ public class LocationActivity2 extends AppCompatActivity {
                                     public void onResponse(String response) {
                                         try {
                                             JSONArray responseArray = new JSONArray(response);
-                                            id = responseArray.getJSONObject(0).toString();
+                                            id = responseArray.getJSONObject(0).getString("bike_id");
+                                            System.out.println(id);
+                                            deleteOldUser();
 
                                         } catch (JSONException e) {
                                             Log.e("database", e.getMessage(), e);
                                         }
                                     }
+
                                 },
                                 new Response.ErrorListener()
                                 {
@@ -140,65 +143,9 @@ public class LocationActivity2 extends AppCompatActivity {
                                         System.out.println(error.getLocalizedMessage());
                                     }
                                 }
+
                         );
                         idRequestQueue.add(idRequest);
-
-
-                        //delete old userinfo from database
-                        requestQueueForDelete = Volley.newRequestQueue(LocationActivity2.this);
-                        String deleteURL = "https://studev.groept.be/api/a21pt112/deleteBike/id";
-                        deleteURL += "/" + id;
-                        StringRequest deleteRequest = new StringRequest(Request.Method.GET, deleteURL,
-                                new Response.Listener<String>() {
-                                    @Override
-                                    public void onResponse(String response) {
-
-                                    }
-                                },
-                                new Response.ErrorListener()
-                                {
-                                    @Override
-                                    public void onErrorResponse(VolleyError error)
-                                    {
-                                        System.out.println(error.getLocalizedMessage());
-                                    }
-                                }
-                        );
-                        requestQueueForDelete.add(deleteRequest);
-
-
-                        //Finally add the info to the database
-                        requestQueueToAdd = Volley.newRequestQueue(LocationActivity2.this);
-                        String requestURL = "https://studev.groept.be/api/a21pt112/addLocation";
-                        /////////////////////////////////////////////////////////////
-
-                        /////HIER ZIT ERGENS EEN FOUT WANT HIJ ADD NIET AAN DE DATABANK MAAR STAPT WEL IN DE ONRESPONSE
-
-                        /////////////////////////////////////////////////////////////
-                        requestURL += "/" + username + "/" + description + "/" + bikeNumber + "/" + longitude + "/" + latitude ;
-                        StringRequest addRequest = new StringRequest(Request.Method.GET, requestURL,
-                                new Response.Listener<String>() {
-                                    @Override
-                                    public void onResponse(String response) {
-                                        try {
-                                            JSONArray responseArray = new JSONArray(response);
-                                            System.out.println("location added");
-
-                                        } catch (JSONException e) {
-                                            Log.e("database", e.getMessage(), e);
-                                        }
-                                    }
-                                },
-                                new Response.ErrorListener()
-                                {
-                                    @Override
-                                    public void onErrorResponse(VolleyError error)
-                                    {
-                                        System.out.println(error.getLocalizedMessage());
-                                    }
-                                }
-                        );
-                        requestQueueToAdd.add(addRequest);
 
 
 
@@ -209,6 +156,60 @@ public class LocationActivity2 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void deleteOldUser()
+    {
+        //delete old userinfo from database
+        requestQueueForDelete = Volley.newRequestQueue(LocationActivity2.this);
+        String deleteURL = "https://studev.groept.be/api/a21pt112/deleteBike/id";
+        deleteURL += "/" + id;
+        StringRequest deleteRequest = new StringRequest(Request.Method.GET, deleteURL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        addUser();
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueueForDelete.add(deleteRequest);
+
+    }
+
+    public void addUser()
+    {
+        //Finally add the info to the database
+        requestQueueToAdd = Volley.newRequestQueue(LocationActivity2.this);
+        String requestURL = "https://studev.groept.be/api/a21pt112/addLocation";
+
+        requestURL += "/" + username + "/" + description + "/" + bikeNumber + "/" + longitude + "/" + latitude ;
+        System.out.println(requestURL);
+        StringRequest addRequest = new StringRequest(Request.Method.GET, requestURL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("location added");
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        System.out.println(error.getLocalizedMessage());
+                    }
+                }
+        );
+        requestQueueToAdd.add(addRequest);
+
     }
 
     public void getCurrentBikeLocation()
